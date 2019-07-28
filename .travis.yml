@@ -8,6 +8,7 @@ branches:
   - jekyll
 install:
 - gem install bundler
+- bundle install
 script:
 - bundle exec jekyll build
 - bundle exec htmlproofer ./_site --disable-external
