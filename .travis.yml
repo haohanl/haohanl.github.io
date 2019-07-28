@@ -1,0 +1,29 @@
+sudo: false
+language: ruby
+cache: bundler
+rvm:
+- 2.6
+branches:
+  only:
+  - jekyll
+script:
+- bundle exec jekyll build
+- bundle exec htmlproofer ./_site --disable-external
+after_success:
+- git clone https://$GH_REF
+- cd $(basename ${GH_REF%.git})
+- git config user.name "Travis-CI"
+- git config user.email ${EMAIL}
+- rsync -az --delete --exclude '.git*' ../_site/ .
+- touch .nojekyll
+- git add -A .
+- git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
+- git push -f "https://${DEPLOY_KEY}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
+env:
+  global:
+  - JEKYLL_ENV=production
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GH_REF: github.com/joshcarp/joshcarp.github.io.git
+  - TARGET_BRANCH: master
+  - secure: NtrmsBI7QbIeS+DHvi06duhy7KVv7z6awWq8Ll4y66L/NpQXXxsZPWx6jV6B9D0Hz2/S9tzF3FyoRl2TO2oM26tRrRDKslVHRwM+nm2Uvf7QmmZlY2A7mM+f1uNYSAgYba6fK7eL7bI8sfIrWWXq9oJPv4mLpa1y/rEuNLahtTL7Z4wbg04F1zOwf7rtEE+SKhY734mus/LNq1T76AgjzgBhO3YcaTPnVQCAhLJqTdBgaFClSNPf2/5Yi2RQsVLs6NBbcEsXGC1Sc0NKgD0GEvo0po7tcHUVFgA0f/UwSehk2P4tMPXrBBogOaCVV76YL/JhgnCv2W66POUBKJGZJCv3WV526KUSukMgyOJKIjGINvAw9yIAdzPaPx0GPyJ50DVNmVhvYBTsCpSkpwQxMnYqvXQMgxCIMMxfL2IsegqwjyIXdQ8Wk8zOhlgLjo5SmNYzV5HTT4p2cwnviCZpSP04eca7yfkpYnI4I/ByKPvr4Le+wIDaGZoyiyqIPqzhPwmlwy4onuA0PTNT0jflNnlI+RE/W4vEkF3NSZIcUe+rCLlAX24D2eeMKLKzjghnHgjfVKmzJ/F/YnIU5Ti+wo53kpUgR4J3HsmTB+wQ/uBqP5nBKnhs0nfZ8sA02pq476qH74/fWfXckNklvHD3fA0C5gMJLVNIB7MeLednUHE=
+  - secure: oxk591oSThsLt3nioLx6kbic4ih5KuadZyaFpKxwrLtjwf9Nxqg/lbF/x4ykHzBY1k75BF5m9asNF6l/VVoNOn8+PX4jrPYP6S+uVN651Kf0WFDDL5FeN3x9yg9icU1BnUuI84idgcGLu8me1ZMp4+Vi/pjH7e1C9M/z+9C70vg/cZfscE3rMdUkeMn8vmNYtaam94+4Az8AaneMd0s46k8YKiHPw2xZ0H17UuQD5T8CNJLRHvtRcjY2raSGHvxIuo6wjGEZ13K/Wiuxu6sH2hdmESqXUunfUi/Xlbcx+OhbeoPBmGOu1RmQMGWF5TOZnlJPYNBdUvFlqcmgpHms+wCpoWKUe7p+RtYOLsFtx+/tWjjhhGYzaVaHTp1kde9XqO7D/7fUz+/LfFcQzuSMyYneT/OhCb4id56YSIBVWzRCJDxuSBhABYqZfPv18YCFl9spbr9eNN0K9C0s0hg3L45psFJgd+9rO9uSLxmLBBuCugSEXxN/aCYXyCRq53n+dxUaXaDYx+mIfZZDnbHOhuQ0kzw6bl8pRCIsQ4O6+y3HVA77Ji/Gecuk15WBJgy5RejQ4cBDVQnxTNTsq7BcRRxQq22hQsGlvCKmw/Y9S/3KYb2N2XQAXpHCTOgNOnOT7sRccod8sV9wtMG7QoxGQJsvbeNJCgy1myBJGvj0FNU=
