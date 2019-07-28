@@ -4,9 +4,10 @@ title: About
 permalink: /about/
 ---
 
-I'm a student and an "enthusiast" or whatever you'd call it who's interested in software engineering and STEM in general and this website serves as a collection of resources I find usefull and my experience. 
-Hope you enjoy! 
+Here you'll find another uni student slowly gathering debt and playing with computers all day.
 
-Contact me at <josh@joshcarp.com> <br>
-[Linkedin](https://www.linkedin.com/in/joshua-c-7a522970/)<br>
-[GitHub](https://www.github.com/joshcarp)<br>
+As someone with a vested interest in procrastinating productively, you'll find a collection of stuff I've amassed over many hours of proactive exploration on the web; with no relation to anything I needed to get done at that point in time.
+
+Feeling lonely? Contact me at <haohan@outlook.com.au> <br>
+[Linkedin](https://www.linkedin.com/in/haohanliu/)<br>
+[GitHub](https://www.github.com/pandasaurusr)<br>
