@@ -6,6 +6,8 @@ rvm:
 branches:
   only:
   - jekyll
+install:
+- gem install bundler
 script:
 - bundle exec jekyll build
 - bundle exec htmlproofer ./_site --disable-external
