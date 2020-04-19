@@ -55,7 +55,7 @@ defaults:
       comments: "true"
 
 # Serving
-url: "haohanliu.com"
+url: ""
 baseurl: ""
 
 # Includes
