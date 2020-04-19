@@ -11,11 +11,17 @@ As a wise man once said...
 So enjoy a very brief summary of me.
 
 
+
+<p>&nbsp;</p>
+
 ### Presently
 Working as a **Senior System Integrator** at PC Case Gear. 
 
 In the process of completing a **Bachelor of Science**, majoring in **Computing and Software Systems** at the University of Melbourne. 
 
+
+
+<p>&nbsp;</p>
 
 ### Language Proficiencies  
 
@@ -28,6 +34,9 @@ In the process of completing a **Bachelor of Science**, majoring in **Computing 
 *The ones I'm getting better at.*  
 **Learning:** Go/Golang
 
+
+
+<p>&nbsp;</p>
 
 ### Projects
 
