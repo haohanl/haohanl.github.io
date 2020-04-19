@@ -3,10 +3,10 @@
   <channel>
     <title></title>
     <description>Welcome to my humble little corner of the internet.</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Apr 2020 06:45:28 +0000</pubDate>
-    <lastBuildDate>Sun, 19 Apr 2020 06:45:28 +0000</lastBuildDate>
+    <link>haohanliu.com/</link>
+    <atom:link href="haohanliu.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 19 Apr 2020 07:15:55 +0000</pubDate>
+    <lastBuildDate>Sun, 19 Apr 2020 07:15:55 +0000</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
@@ -14,8 +14,8 @@
         <description>&lt;p&gt;This is a test&lt;/p&gt;
 </description>
         <pubDate>Fri, 19 Apr 2019 23:56:00 +0000</pubDate>
-        <link>/test/test.html</link>
-        <guid isPermaLink="true">/test/test.html</guid>
+        <link>haohanliu.com/test/test.html</link>
+        <guid isPermaLink="true">haohanliu.com/test/test.html</guid>
         
         <category>test tag</category>
         
@@ -163,8 +163,8 @@
 &lt;p&gt;That’s it! Do not hesitate to ask if you have any questions. Also you can send me feature requests. There are some nice features that are planed for the upcoming versions. Happy blogging!&lt;/p&gt;
 </description>
         <pubDate>Sun, 20 Mar 2016 12:36:00 +0000</pubDate>
-        <link>/docs/help/docmentation.html</link>
-        <guid isPermaLink="true">/docs/help/docmentation.html</guid>
+        <link>haohanliu.com/docs/help/docmentation.html</link>
+        <guid isPermaLink="true">haohanliu.com/docs/help/docmentation.html</guid>
         
         <category>documentation</category>
         
@@ -197,8 +197,8 @@
 &lt;/ol&gt;
 </description>
         <pubDate>Wed, 16 Mar 2016 08:34:00 +0000</pubDate>
-        <link>/docs/help/installation.html</link>
-        <guid isPermaLink="true">/docs/help/installation.html</guid>
+        <link>haohanliu.com/docs/help/installation.html</link>
+        <guid isPermaLink="true">haohanliu.com/docs/help/installation.html</guid>
         
         <category>installation</category>
         
@@ -232,8 +232,8 @@
 &lt;p&gt;&lt;em&gt;Source: &lt;a href=&quot;http://jekyllbootstrap.com/lessons/jekyll-introduction.html&quot; target=&quot;_blank&quot;&gt;http://jekyllbootstrap.com/lessons/jekyll-introduction.html&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 15 Mar 2016 22:00:00 +0000</pubDate>
-        <link>/docs/what-is-jekyll.html</link>
-        <guid isPermaLink="true">/docs/what-is-jekyll.html</guid>
+        <link>haohanliu.com/docs/what-is-jekyll.html</link>
+        <guid isPermaLink="true">haohanliu.com/docs/what-is-jekyll.html</guid>
         
         
         <category>docs</category>
@@ -387,8 +387,8 @@
 &lt;p&gt;The front matter is where Jekyll starts to get really cool. Any file that contains a YAML front matter block will be processed by Jekyll as a special file. The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines.&lt;/p&gt;
 </description>
         <pubDate>Fri, 11 Mar 2016 23:56:00 +0000</pubDate>
-        <link>/docs/sample-data.html</link>
-        <guid isPermaLink="true">/docs/sample-data.html</guid>
+        <link>haohanliu.com/docs/sample-data.html</link>
+        <guid isPermaLink="true">haohanliu.com/docs/sample-data.html</guid>
         
         
         <category>docs</category>
