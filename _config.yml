@@ -1,13 +1,13 @@
 # General Settings
-name: Steve Austin
-job_title: UI/UX Engineer
-email: youremail@gmail.com
+name: Haohan Liu
+job_title: System Integrator/Student
+email: haohan@outlook.com.au
 description: I build great products at Google, currently Google Maps. I also enjoy capturing moments with my camera and discovering new music. Follow me Twitter or drop me a line.
 avatar: https://s3.amazonaws.com/uifaces/faces/twitter/dancounsell/128.jpg
 favicon: /favicon.ico
 twitter_handler: your_handler
-analytics_code: UA-XXXXXXX-2
-disqus: your_disqus_site
+# analytics_code:
+# disqus: your_disqus_site
 
 # Social Accounts
 social_networks:
