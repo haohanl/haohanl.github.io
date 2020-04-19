@@ -1,12 +1,36 @@
 ---
 layout: page
-title:  "Portfolio"
-permalink: "/portfolio"
+title:  "About Me"
+permalink: "/about"
 ---
 
-<figure>
-    <img src="https://cdn.dribbble.com/users/1073937/screenshots/5036567/waterfall.png" />
-    <figcaption>Created by <a href="https://dribbble.com/HannahLizSharp" target="_blank_">Hannah Sharp</a></figcaption>
-</figure>
+As a wise man once said...
 
-In addition to writing posts, another thing you may want to do with your Jekyll site is create static pages. By taking advantage of the way Jekyll copies files and directories, this is easy to do. [More Information](https://jekyllrb.com/docs/pages/){:target="_blank"}
+<p style="text-align: center;"> <i> "Why waste time say lot word, when few word do trick?</i> </p>
+
+So enjoy a very brief summary of me.
+
+
+### Presently
+Working as a **Senior System Integrator** at PC Case Gear. 
+
+In the process of completing a **Bachelor of Science**, majoring in **Computing and Software Systems** at the University of Melbourne. 
+
+
+### Language Proficiencies  
+
+*The ones I do real work in.*  
+**Proficient:** C, C#, Java, LaTeX, Python
+
+*The ones I've played around with before.*  
+**Familiar:** AutoIt, Javascript
+
+*The ones I'm getting better at.*  
+**Learning:** Go/Golang
+
+
+### Projects
+
+<abbr title="Private Repository"><strong>ScriptEx</strong></abbr>: Windows CLI program for asynchronous software installation, system stress testing, and final quality control. Written in C#. Compiled with Fody Costura. Actively being developed on the side at PCCG. 
+
+**[Shelleton](https://github.com/PandasaurusR/Shelleton)**: A C# project shell for testing and interaction with internal class methods.
