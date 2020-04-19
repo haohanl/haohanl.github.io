@@ -2,7 +2,7 @@
 name: Haohan Liu
 job_title: System Integrator/Student
 email: haohan@outlook.com.au
-description: I build great products at Google, currently Google Maps. I also enjoy capturing moments with my camera and discovering new music. Follow me Twitter or drop me a line.
+description: Welcome to my humble little corner of the internet.
 avatar: /media/profile/profile.jpg
 favicon: /favicon.ico
 twitter_handler: your_handler
@@ -11,8 +11,8 @@ twitter_handler: your_handler
 
 # Social Accounts
 social_networks:
--  { name: facebook, url: 'http://facebook.com' }
--  { name: twitter, url: 'http://twitter.com' }
+-  { name: facebook, url: '' }
+-  { name: twitter, url: '' }
 -  { name: instagram, url: '' }
 -  { name: google-plus, url: '' }
 -  { name: linkedin, url: '' }
@@ -42,14 +42,13 @@ show_categories: 1
 show_tags: 1
 show_email: 1
 show_rss: 1
-show_comments: 1
+show_comments: 0
 show_menu: 1
 fixed_sidebar: 1
 
 # Defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
