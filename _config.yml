@@ -1,10 +1,10 @@
 # General Settings
 name: Haohan Liu
-job_title: System Integrator/Student
+job_title: CS Student & System Integrator
 email: haohan@outlook.com.au
-description: Welcome to my humble little corner of the internet.
+description: Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.
 avatar: /media/profile/profile.jpg
-favicon: /favicon.ico
+favicon: favicon.ico
 twitter_handler: your_handler
 # analytics_code:
 # disqus: your_disqus_site
@@ -17,7 +17,7 @@ social_networks:
 -  { name: google-plus, url: '' }
 -  { name: linkedin, url: '' }
 -  { name: skype, url: '' }
--  { name: github, url: '' }
+-  { name: github, url: 'https://github.com/PandasaurusR' }
 -  { name: codepen, url: '' }
 -  { name: stack-overflow, url: '' }
 -  { name: dribbble, url: '' }
