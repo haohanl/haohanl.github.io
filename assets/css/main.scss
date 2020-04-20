@@ -54,7 +54,7 @@
 	& > h1 { text-transform: uppercase; color: $grey-color-light; letter-spacing: 0.1em; font-size: 12px; font-weight: 400; margin: 0 0 20px; text-align: center; }
 	.search { position: relative; margin: 0 0 20px; border: 1px solid $grey-color-lightest; background: $white; box-shadow: 0 2px 3px rgba($black,.05), inset 6px 0 0 $grey-color-lightest; @include placeholder($grey-color-lighter, italic);
 		& > div { @include flexbox(); overflow: hidden;
-			.show-results-count { min-width: 100px; margin-left: -100px; padding: 0 20px; min-height: 55px; line-height: 55px; color: $grey-color-lighter; background: $white; letter-spacing: 0.05em; font-size: 11px; text-transform: uppercase; box-shadow: 6px 0 0 0 $grey-color-lightest; @include transition(all .2s ease);
+			.show-results-count { min-width: 100px; margin-left: -100px; padding: 0 20px; min-height: 55px; line-height: 55px; color: $grey-color-lighter; background: $white; letter-spacing: 0.05em; font-size: 11px; text-transform: uppercase; box-shadow: 6px 0 0 0 $grey-color-lightest; @include transition(all 0.5s ease);
 				&.active { margin-left: 0; }
 			}
 			.search-holder { width: 100%; margin: 0 0 0 34px; background: url(../svg/search-icon.svg) no-repeat left center; @include bgsizeNum(15px, 16px); padding: 0 0 0 25px;
@@ -104,7 +104,7 @@
 
 			em, strong { color: $grey-color-dark; }
 
-			h1, h2, h3, h4, h5, h6 { position: relative; left: -40px; padding: 0 0 0 40px; margin: 0px 0; color: $grey-color-dark; }
+			h1, h2, h3, h4, h5, h6 { position: relative; left: -40px; padding: 0 0 0 40px; margin-top: 2ex; color: $grey-color-dark; }
 			h1 { font-size: 30px; }
 			h2 { font-size: 26px; }
 			h3 { font-size: 22px; }
@@ -116,8 +116,8 @@
 				&:hover { color: $grey-color-light; }
 			}
 
-			a { color: $primary-color; border-bottom: 1px solid $primary-color; @include transition(border .1s ease);
-				&:hover { border: none; }
+			a { color: $link-color-normal; border-bottom: 0px solid $link-color-normal; @include transition(all .05s ease);
+				&:hover { color: $link-color-hover; border-bottom: 2px solid $link-color-hover;}
 			}
 
 			ul, ol { margin: 15px 0;
