@@ -5,9 +5,9 @@
     <description>Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Apr 2020 10:14:08 +0000</pubDate>
-    <lastBuildDate>Sun, 19 Apr 2020 10:14:08 +0000</lastBuildDate>
-    <generator>Jekyll v3.8.6</generator>
+    <pubDate>Mon, 20 Apr 2020 14:43:13 +0000</pubDate>
+    <lastBuildDate>Mon, 20 Apr 2020 14:43:13 +0000</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
       <item>
         <title>Introductions</title>
@@ -16,6 +16,7 @@
 &lt;p&gt;Feel free to check back every-so-often and there’s a non-zero chance that there may be something new to see.&lt;/p&gt;
 
 &lt;p&gt;In the meantime, feel free to click around and see if anything breaks.&lt;/p&gt;
+
 </description>
         <pubDate>Fri, 19 Apr 2019 18:17:00 +0000</pubDate>
         <link>/fluff/introductions.html</link>

@@ -12,7 +12,7 @@ var index = lunr(function () {
     index.add({
       title: "Introductions",
       category: ["fluff"],
-      content: "Oh wow would you look at that. There’s a website here now.\n\nFeel free to check back every-so-often and there’s a non-zero chance that there may be something new to see.\n\nIn the meantime, feel free to click around and see if anything breaks.\n",
+      content: "Oh wow would you look at that. There’s a website here now.\n\nFeel free to check back every-so-often and there’s a non-zero chance that there may be something new to see.\n\nIn the meantime, feel free to click around and see if anything breaks.\n\n",
       tags: ["fluff"],
       id: 0
     });
