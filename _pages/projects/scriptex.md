@@ -22,9 +22,9 @@ The intent was to create a lightweight, portable, and flexible platform with cor
 
 ScriptEx is written in C# on .NET 4.7.2. This platform was chosen due to its closeness to the Windows OS, easy access to <abbr title="Windows Management Instruments">WMI</abbr>, and relatively simple multithreading.
 
-[Fody Costura](https://github.com/Fody/Costura) is utilised during compilation to bundle required assemblies (`.dll` files) into a single executable. Required assemblies include:
-* [YamlDotNet](https://github.com/aaubry/YamlDotNet)
-* [WUApiLib](https://docs.microsoft.com/en-us/windows/win32/wua_sdk/windows-update-agent-object-model)
+[Fody Costura](https://github.com/Fody/Costura){:target="_blank"} is utilised during compilation to bundle required assemblies (`.dll` files) into a single executable. Required assemblies include:
+* [YamlDotNet](https://github.com/aaubry/YamlDotNet){:target="_blank"}
+* [WUApiLib](https://docs.microsoft.com/en-us/windows/win32/wua_sdk/windows-update-agent-object-model){:target="_blank"}
 * Microsoft.Win32.TaskScheduler
 * Microsoft.Win32.Registry
 * System.Security.AccessControl

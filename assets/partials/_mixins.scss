@@ -80,3 +80,42 @@
 	-webkit-align-items: $align;
 	align-items: $align;
 }
+
+@mixin scale($ratio) {
+	-webkit-transform: scale($ratio);
+	-moz-transform: scale($ratio);
+	-ms-transform: scale($ratio);
+	-o-transform: scale($ratio);
+	transform: scale($ratio);
+}
+
+@mixin border(
+		$border-size: 1px,
+		$border-pattern: solid,
+		$border-color: black,
+		$border-position: all,
+		$border-clear: none ) {
+	@if $border-position == all {
+		border: $border-size $border-pattern $border-color;
+	}
+	@else {
+		border-#{$border-position}: $border-size
+		$border-pattern $border-color;
+	}
+	@if $border-clear == none {
+		$border-position: all;
+	}
+	@else {
+		border-#{$border-clear}: none;
+	}
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color) {
+	-webkit-box-shadow: $top $left $blur $size $color;
+	-moz-box-shadow: $top $left $blur $size $color;
+	box-shadow: $top $left $blur $size $color;
+ }
+
+ @mixin simple-shadow() {
+	 @include box-shadow(1px, 1px, 10px, 0, rgba(0,0,0,0.4));
+ }

@@ -118,6 +118,10 @@
 
 			a { color: $link-color-normal; border-bottom: 0px solid $link-color-normal; @include transition(all .05s ease);
 				&:hover { color: $link-color-hover; border-bottom: 2px solid $link-color-hover;}
+
+				img { width: inherit; height: inherit; @include transition(all 0.1s ease); @include border(0px,solid,$primary-color,all);
+					&:hover { @include border(3px,solid,$primary-color,all); @include scale(1.05); opacity: 0.8; @include simple-shadow() } 
+				}
 			}
 
 			ul, ol { margin: 15px 0;
@@ -145,6 +149,11 @@
 			.aligncenter { clear: both; margin: 0 auto 20px; }
 
 			figcaption { color: $grey-color-light; font-size: 13px; font-style: italic; padding-top: 10px; }
+
+			figure { margin-top: 10px; }
+
+			img { width: inherit; }
+			
 
 			@import "syntax";
 		}
