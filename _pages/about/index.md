@@ -15,7 +15,7 @@ So here's a brief overview of me.
 Sup. I'm **Haohan**. Presently, I am...
 
 
-Working as a **Senior System Integrator/Technician** at _PC Case Gear_. 
+Working as a **Senior System Builder/Technician** at _PC Case Gear_. 
 
 In the process of completing a **Bachelor of Science**, majoring in **Computing and Software Systems** at the _University of Melbourne_. 
 
