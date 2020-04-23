@@ -32,13 +32,15 @@ To name a few.
 ---
 
 
-## Language Proficiencies  
+## Technical Proficiencies  
+
+Here are a set of languages, frameworks, or other tools I am fond of. 
 
 *The ones I do real work in.*  
-**Proficient:** C, C#, Java, LaTeX, Python
+**Proficient:** C, C#, Git, Java, LaTeX, Python
 
 *The ones I've played around with before.*  
-**Familiar:** AutoIt, Javascript, Jekyll
+**Familiar:** AutoIt, Javascript, Jekyll, SQL
 
 *The ones I'm getting better at.*  
 **Learning:** Go/Golang
