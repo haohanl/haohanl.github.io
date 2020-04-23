@@ -33,7 +33,7 @@ ScriptEx is written in C# on .NET 4.7.2. This platform was chosen due to its clo
 
 ## Repository
 
-The repository for ScriptEx is currently private. Please contact me if you require access.
+[https://github.com/PandasaurusR/ScriptEx](https://github.com/PandasaurusR/ScriptEx)
 
 
 
