@@ -1,6 +1,6 @@
 ---
 layout: page_hidden
-title:  "ScriptEx(Dee|Dee II)"
+title:  "ScriptEx(Dee|Dee II)?"
 permalink: "/projects/scriptex"
 ---
 
@@ -34,10 +34,4 @@ ScriptEx is written in C# on .NET 4.7.2. This platform was chosen due to its clo
 ## Repository
 
 [https://github.com/PandasaurusR/ScriptEx](https://github.com/PandasaurusR/ScriptEx)
-
-
-
-
-
-
 
