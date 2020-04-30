@@ -228,15 +228,15 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 			@import "syntax";
 		}
 
-		.post-footer { @include flexbox(); position: absolute; bottom: 0; left: 0; width: 100%; border-top: 1px solid var(--box-border-color); background: var(--box-bg-color); box-shadow: inset 0 10px 10px -9px var(--box-shadow-color);
+		.post-footer { @include flexbox(); position: absolute; bottom: 0; left: 0; width: 100%; border-top: 1px solid var(--box-border-color); background: var(--box-bg-color); box-shadow: inset 0 10px 10px -9px var(--box-shadow-color); @include transition(all 0.3s ease);
 			div { min-height: 48px; font-size: 11px; line-height: 48px; color: var(--main-text-color);
-				&.share { position: relative; padding: 0 20px 0 40px; text-transform: uppercase; background: url(../svg/share-icon.svg) no-repeat 20px center; border-right: 1px solid var(--box-border-color); @include bgsizeNum(10px, 10px); @include transition(background-color .1s ease); cursor: pointer;
+				&.share { position: relative; padding: 0 20px 0 40px; text-transform: uppercase; background: url(../svg/share-icon.svg) no-repeat 20px center; border-right: 1px solid var(--box-border-color); @include bgsizeNum(10px, 10px); @include transition(all .3s ease); cursor: pointer;
 					&:hover { background-color: var(--box-hover-color); }
 					&.active { background-color: var(--box-hover-color);
 						.social-networks { @include flexbox(); }
 					}
 					.social-networks { display: none; position: absolute; top: -48px; left: 50%; width: 100px; box-shadow: 0 0 0 1px var(--box-border-color), 0 3px 4px var(--box-shadow-color); @include translate(-50%, 0);
-						li { position: relative; width: 50%; min-height: 50px; background: var(--box-bg-color); text-align: center; box-shadow: inset 1px 0 0 var(--box-border-color); @include transition(background .1s ease);
+						li { position: relative; width: 50%; min-height: 50px; background: var(--box-bg-color); text-align: center; box-shadow: inset 1px 0 0 var(--box-border-color); @include transition(all .3s ease);
 							&:first-of-type { box-shadow: none; }
 							&.share-facebook:hover { background: $facebook-brand-color; }
 							&.share-twitter:hover { background: $twitter-brand-color; }
@@ -250,7 +250,7 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 				&.tags { width: 100%; padding: 0 10px; text-transform: lowercase;
 					ul { @include flexbox(); @include flex-flow(row wrap); @include justify-content(flex-end);
 						li { margin: 0 0 0 5px;
-							a { color: var(--main-text-gr-color); background: var(--box-border-color); padding: 4px 10px; border-radius: 18px; @include transition(background .1s ease);
+							a { color: var(--main-text-gr-color); background: var(--box-border-color); padding: 4px 10px; border-radius: 18px; @include transition(all .3s ease);
 								&:hover { background: var(--box-hover-color); }
 							}
 						}
