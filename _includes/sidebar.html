@@ -14,6 +14,13 @@
         </div>
     </div>
 
+    <!-- <input type="button" id="darkmode-toggle" value="ONN" style="color:blue"  onclick="toggle(this);"> -->
+    <label class="darkmode-label" id="darkmode-label"></label>
+    <label class="switch">
+        <input type="checkbox" id="darkmode-switch">
+        <span class="slider round" onclick="modeSwitcher()"></span>
+    </label>
+
     {% if site.show_menu == 1 %}
         {% if site.pages %}
         <div class="mainmenu">

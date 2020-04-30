@@ -1,5 +1,5 @@
-.highlight { background: none; border: 1px solid $grey-color-light; padding: 20px; font-size: medium; line-height: 1.5;
-	.lineno { padding: 0 10px 0 0; color: $grey-color-light; }
+.highlight { background: var(--box-hover-color); border: 1px solid var(--main-text-gr-color); padding: 20px; font-size: medium; line-height: 1.5;
+	.lineno { padding: 0 10px 0 0; color: var(--main-text-gr-color); }
 	.highlighter-rouge & { background: #eef; }
 	.c     { color: #998; font-style: italic } // Comment
 	.err   { color: #a61717; background-color: #e3d2d2 } // Error

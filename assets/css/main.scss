@@ -5,18 +5,76 @@
 
 .wrapper { max-width: $default-width; margin: 0 auto; padding: 60px 20px; height: 100%;  }
 
-html { 
-	background: url(/media/bg/bg.png); 
-	background-color: $grey-color-lightest;
+/* Darkmode */
+html, html[data-theme="dark"] { 
+	--page-bg-color: #111;
+	--primary-color: #007be0;
+
+	--main-text-color: #ddd;
+	--main-text-gr-color: #666;
+	--main-text-it-color: #ccc;
+	--main-text-em-color: #eee;
+	
+	--box-bg-color: #222;
+	--box-hover-color: #333;
+	--box-border-color: #111;
+	--box-shadow-color: rgba(0,0,0,0.4);
+
+	--link-color: #2491eb;
+	--link-hover-color: #59b3fc;
+
+	@include transition(all 0.3s ease);
+	background: url(/media/bg/bg-dark.png); 
+	background-color: var(--page-bg-color);
 	background-repeat: repeat;
 	background-attachment: fixed;
 }
 
-body { 
-	background: none;
-	color: $grey-color-dark;
+html[data-theme="light"] { 
+	--page-bg-color: #eee;
+	--primary-color: #007be0;
+
+	--main-text-color: #222;
+	--main-text-gr-color: #888;
+	--main-text-it-color: #333;
+	--main-text-em-color: #111;
+	
+	--box-bg-color: #fafafa;
+	--box-hover-color: #e6e6e6;
+	--box-border-color: #ddd;
+	--box-shadow-color: rgba(0,0,0,.1);
+
+	--link-color: #2491eb;
+	--link-hover-color: #59b3fc;
+
+	@include transition(all 0.3s ease);
+	background: url(/media/bg/bg-light.png); 
+	background-color: var(--page-bg-color);
+	background-repeat: repeat;
+	background-attachment: fixed;
 }
 
+/* Darkmode Slider: https://www.w3schools.com/howto/howto_css_switch.asp */
+.switch { position: relative; vertical-align: middle; display: inline-block; width: 40px; height: 12px; margin-top: 20px; @include transition(filter .1s ease);
+	input {	opacity: 0;	width: 0; height: 0; }
+	&:hover { filter: brightness(1.2); }
+}
+
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #666; border-radius: 17px; @include transition(all .2s ease);
+	&:before { border-radius: 10px; position: absolute; content: ""; height: 6px; width: 15px; left: 3px; bottom: 3px; background-color: #111; @include transition(all .2s ease);
+	}
+}
+
+input:checked + .slider:before { @include translate(17px, 0); @include transition(all .2s ease); position: absolute; content: ""; height: 6px; width: 15px; left: 3px; bottom: 3px; background-color: white; }
+
+input:checked + .slider { background-color: #bbb; }
+
+input:focus + .slider {	box-shadow: 0 0 1px white; }
+
+.darkmode-label { vertical-align: middle; position: relative; display: inline-block; margin-right: 10px; margin-top: 20px; font-size: small;
+}
+
+/* Steve SCSS Source */
 .user-profile { position: absolute; top: 60px; width: 100%; max-width: 300px; text-align: center; @include transition(right .3s ease-in-out);
 	&.fixed { position: fixed; }
 	.compact-header {
@@ -25,22 +83,22 @@ body {
 			img { max-width: 140px; max-height: 140px; border-radius: 50%; @include transition(all .1s ease); }
 		}
 		.my-info {
-			.my-name { display: block; font-size: 24px; font-weight: 700; line-height: 30px; color: $grey-color-darker; }
+			.my-name { display: block; font-size: 24px; font-weight: 700; line-height: 30px; color: var(--main-text-em-color); }
 			.my-job-title { font-size: 14px; font-weight: 300; margin: 5px 0 0; }
 		}
 	}
-	.mainmenu { margin: 40px 0; text-align: center;
-		a { display: block; max-width: 300px; margin: 0 auto; padding: 15px 0; border: 1px solid $grey-color-lightest; border-top: none; background: $background-color; box-shadow: 0 2px 3px rgba($black,.05); @include transition(all .1s ease);
-			&:hover, &.active { background: lighten($background-color, 5%); box-shadow: 0 2px 3px rgba($black,.05), inset 4px 0 0 $primary-color; }
-			&:first-of-type { border-top: 1px solid $grey-color-lightest; }
+	.mainmenu { margin: 20px 0; text-align: center;
+		a { display: block; max-width: 300px; margin: 0 auto; padding: 15px 0; border: 1px solid var(--box-border-color); border-top: none; background: var(--box-bg-color); box-shadow: 0 2px 3px var(--box-shadow-color); color: var(--main-text-color); @include transition(all .3s ease);
+			&:hover, &.active { background: var(--box-hover-color); box-shadow: 0 2px 3px var(--box-shadow-color), inset 4px 0 0 var(--primary-color); }
+			&:first-of-type { border-top: 1px solid var(--box-border-color); }
 		}
 	}
 	.about-me { font-size: 16px; line-height: 26px; margin: 30px 0 0; }
 	.socials { @include flexbox(); @include justify-content(); margin: 25px 0 0;
 		li { margin: 5px;
-			a { @include flexbox(); @include align-items(); @include justify-content(); width: 40px; height: 40px; background: darken($grey-color-lightest, 6%); border-radius: 50%; @include transition(all .1s ease);
-				&:hover { background: $primary-color; }
-				svg * { fill: $white; }
+			a { @include flexbox(); @include align-items(); @include justify-content(); width: 40px; height: 40px; background: var(--box-bg-color); border-radius: 50%; box-shadow: 0 2px 3px var(--box-shadow-color); @include transition(all .1s ease);
+				&:hover { background: var(--primary-color); }
+				svg * { fill: var(--main-text-color); }
 			}
 		}
 	}
@@ -48,8 +106,8 @@ body {
 	.burger { display: none !important;
 		.hidden { display: none; }
 		label { display: block; padding: 4*$burger-cell-height 0; cursor: pointer; margin: 0;
-			& > span { position: relative; display: block; width: 24px; height: $burger-cell-height; background: $grey-color-darker; text-indent: -9999px; @include transition(background .01s .3s ease);
-				&:before, &:after { position: absolute; left: 0; width: 24px; height: $burger-cell-height; background: $grey-color-darker; content: ""; @include transition(top .3s .35s ease, transform .3s .05s ease); }
+			& > span { position: relative; display: block; width: 24px; height: $burger-cell-height; background: var(--main-text-em-color); text-indent: -9999px; @include transition(background .01s .3s ease);
+				&:before, &:after { position: absolute; left: 0; width: 24px; height: $burger-cell-height; background: var(--main-text-em-color); content: ""; @include transition(top .3s .35s ease, transform .3s .05s ease); }
 				&:before { top: -(4*$burger-cell-height); }
 				&:after { top: 4*$burger-cell-height; }
 			}
@@ -63,60 +121,60 @@ body {
 }
 
 .the-content { margin-left: 350px;
-	& > h1 { text-transform: uppercase; color: $grey-color-light; letter-spacing: 0.1em; font-size: 12px; font-weight: 400; margin: 0 0 20px; text-align: center; }
-	.search { position: relative; margin: 0 0 20px; border: 1px solid $grey-color-lightest; background: $grey-color-lighter; box-shadow: 0 2px 3px rgba($black,.05), inset 6px 0 0 $grey-color-lighter; @include placeholder($grey-color-light, italic); caret-color: $grey-color-darker;
+	& > h1 { text-transform: uppercase; color: var(--main-text-em-color); letter-spacing: 0.1em; font-size: 12px; font-weight: 400; margin: 0 0 20px; text-align: center; }
+	.search { position: relative; margin: 0 0 20px; border: 1px solid var(--box-border-color); background: var(--box-bg-color); box-shadow: 0 2px 3px var(--box-shadow-color), inset 6px 0 0 var(--box-border-color); @include placeholder(var(--main-text-gr-color), italic); caret-color: var(--main-text-color); @include transition(all 0.3s ease);
 		& > div { @include flexbox(); overflow: hidden;
-			.show-results-count { min-width: 100px; margin-left: -100px; padding: 0 20px; min-height: 55px; line-height: 55px; color: $grey-color-light; background: $grey-color-lighter; letter-spacing: 0.05em; font-size: 11px; text-transform: uppercase; box-shadow: 6px 0 0 0 $primary-color; @include transition(all 0.5s ease);
+			.show-results-count { min-width: 100px; margin-left: -100px; padding: 0 20px; min-height: 55px; line-height: 55px; color: var(--main-text-gr-color); background: var(--box-bg-color); letter-spacing: 0.05em; font-size: 11px; text-transform: uppercase; box-shadow: 6px 0 0 0 var(--primary-color); @include transition(all 0.3s ease-in-out);
 				&.active { margin-left: 0; }
 			}
 			.search-holder { width: 100%; margin: 0 0 0 34px; background: url(../svg/search-icon.svg) no-repeat left center; @include bgsizeNum(15px, 16px); padding: 0 0 0 25px;
-				input { width: 100%; min-height: 55px; line-height: 22px; background: none; border: none; color: $grey-color-dark; }
+				input { width: 100%; min-height: 55px; line-height: 22px; background: none; border: none; color: var(--main-text-color); }
 			}
 		}
-		.results-container { position: absolute; left: -1px; width: calc(100% + 2px); padding: 1px; box-shadow: inset 0 0 0 1px $grey-color-lightest, 0 7px 10px rgba($black,.05); z-index: 1000;
+		.results-container { position: absolute; left: -1px; width: calc(100% + 2px); padding: 1px; box-shadow: inset 0 0 0 1px var(--box-border-color), 0 7px 10px var(--box-shadow-color); z-index: 1000;
 			li { font-size: 15px;
-				a { position: relative; display: block; padding: 15px 15px 15px 35px; background: $background-color; box-shadow: 0 -1px 0 $grey-color-lightest; @include transition(all .1s ease);
-					&:before { position: absolute; top: 50%; left: 15px; background: $grey-color-normal; content: ""; width: 5px; height: 5px; border-radius: 50%; @include translate(0, -50%); }
-					&:hover { background: lighten($background-color, 5%); }
+				a { position: relative; display: block; padding: 15px 15px 15px 35px; background: var(--box-bg-color); box-shadow: 0 -1px 0 var(--box-border-color); color: var(--main-text-color); @include transition(all .1s ease);
+					&:before { position: absolute; top: 50%; left: 15px; background: var(--main-text-color); content: ""; width: 5px; height: 5px; border-radius: 50%; @include translate(0, -50%); }
+					&:hover { background: var(--box-hover-color); }
 				}
 			}
 		}
 	}
-	.post { position: relative; margin: 40px 0 0; padding: 40px 40px 80px; border: 1px solid $grey-color-lightest; background: $background-color; box-shadow: 0 2px 3px rgba($black, .05);
+	.post { position: relative; margin: 40px 0 0; padding: 40px 40px 80px; border: 1px solid var(--box-border-color); background: var(--box-bg-color); box-shadow: 0 2px 3px var(--box-shadow-color); @include transition(all 0.3s ease);
 		&.page { padding: 40px; }
 
 		&:first-of-type { margin: 0; }
 
 		.post-header {
 			ul { @include flexbox(); margin: 0 0 6px;
-				li { position: relative; margin: 0 0 0 10px; padding: 0 0 0 12px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.06em; color: $grey-color-normal;
+				li { position: relative; margin: 0 0 0 10px; padding: 0 0 0 12px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.06em; color: var(--main-text-gr-color);
 					&:first-of-type { margin: 0; padding: 0;
 						&:before { content: none; }
 					}
-					&:before { position: absolute; top: 50%; left: 0; width: 3px; height: 3px; border-radius: 50%; background: $grey-color-light; content: ""; @include translate(0, -50%); }
-					&.cats a { color: $grey-color-normal; border-bottom: 1px solid transparent; @include transition(all .1s ease);
+					&:before { position: absolute; top: 50%; left: 0; width: 3px; height: 3px; border-radius: 50%; background: var(--main-text-gr-color); content: ""; @include translate(0, -50%); }
+					&.cats a { color: var(--main-text-gr-color); border-bottom: 1px solid transparent; @include transition(all .1s ease);
 						&:last-of-type:after { content: none; }
 						&:after { content: ","; }
-						&:hover { color: $primary-color; border-bottom: 1px solid $primary-color; }
+						&:hover { color: var(--primary-color); border-bottom: 1px solid var(--primary-color); }
 					}
 				}
 			}
-			h1, h2 { font-size: 30px; font-weight: 900; margin: 0 0 20px; color: $grey-color-darker;
-				a { color: $grey-color-darker; @include transition(color .1s ease);
-					&:hover { color: $primary-color; }
+			h1, h2 { font-size: 30px; font-weight: 900; margin: 0 0 20px; color: var(--main-text-em-color);
+				a { color: var(--main-text-em-color); @include transition(color .1s ease);
+					&:hover { color: var(--primary-color); }
 				}
 			}
 		}
 
 		.post-content { font-size: 16px; line-height: 26px;
-			abbr { border-bottom: 1px dotted $grey-color-normal; text-decoration: none; cursor: help; }
+			abbr { border-bottom: 1px dotted var(--main-text-color); text-decoration: none; cursor: help; }
 			code, kbd, pre { margin: 0; font-family: monospace; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; background: none; }
 			address, cite, var { font-style: italic; }
-			blockquote { margin: 40px 0; padding-left: 30px; font-style: italic; border-left: 3px solid $grey-color-light; }
+			blockquote { margin: 40px 0; padding-left: 30px; font-style: italic; border-left: 3px solid var(--main-text-it-color); background: var(--box-hover-color); color: var(--main-text-it-color); }
 
-			em, strong { color: $grey-color-darker; }
+			em, strong { color: var(--main-text-em-color); }
 
-			h1, h2, h3, h4, h5, h6 { position: relative; left: -40px; padding: 0 0 0 40px; margin-top: 2ex; color: $grey-color-darker; }
+			h1, h2, h3, h4, h5, h6 { position: relative; left: -40px; padding: 0 0 0 40px; margin-top: 2ex; color: var(--main-text-em-color); }
 			h1 { font-size: 30px; }
 			h2 { font-size: 26px; }
 			h3 { font-size: 22px; }
@@ -124,43 +182,43 @@ body {
 			h5 { font-size: 18px; }
 			h6 { font-size: 16px; }
 
-			.heading-marker { position: absolute; left: 15px; top: 50%; border: none; font-weight: 400; color: darken($grey-color-normal, 8%); font-size: 24px; @include transition(color .1s linear); @include translate(0, -50%);
-				&:hover { color: $grey-color-dark; }
+			.heading-marker { position: absolute; left: 15px; top: 50%; border: none; font-weight: 400; color: var(--main-text-gr-color); font-size: 24px; @include transition(color .1s linear); @include translate(0, -50%);
+				&:hover { color: var(--main-text-em-color); }
 			}
 
-			a { color: $link-color-normal; border-bottom: 0px solid $link-color-normal; @include transition(all .05s ease);
-				&:hover { color: $link-color-hover; border-bottom: 2px solid $link-color-hover;}
+			a { color: var(--link-color); border-bottom: 0px solid var(--link-color); @include transition(all .05s ease);
+				&:hover { color: var(--link-hover-color); border-bottom: 2px solid var(--link-hover-color);}
 
-				img { width: inherit; height: inherit; @include transition(all 0.1s ease); @include border(0px,solid,$primary-color,all);
-					&:hover { @include border(3px,solid,$primary-color,all); @include scale(1.05); opacity: 0.8; @include simple-shadow() } 
+				img { width: inherit; height: inherit; @include transition(all 0.1s ease); @include border(0px,solid,var(--primary-color),all);
+					&:hover { @include border(3px,solid,var(--primary-color),all); @include scale(1.05); opacity: 0.8; @include simple-shadow() } 
 				}
 			}
 
 			ul, ol { margin: 15px 0;
 				ul, ol { padding: 0 0 0 20px; }
 				li { margin: 5px 0;
-					& > code { font-size: 14px; padding: 3px 6px; background: lighten($background-color, 4%); border: 1px solid $grey-color-light; }
+					& > code { font-size: 14px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
 				}
 			}
 
 			dl { margin: 40px 0;
 				dt { margin: 10px 0 0; font-size: 18px; font-weight: 700; }
 				dd { margin: 5px 0;
-					& > code { font-size: 14px; padding: 3px 6px; background: lighten($background-color, 4%); border: 1px solid $grey-color-light; }
+					& > code { font-size: 14px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
 				}
 			}
 
 			ul { list-style-type: disc; list-style-position: inside; }
 
 			p { margin: 15px 0; line-height: 27px;
-				& > code { font-size: 14px; padding: 3px 6px; background: lighten($background-color, 4%); border: 1px solid $grey-color-light; }
+				& > code { font-size: 14px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
 			}
 
 			.alignleft { float: left; margin: 20px 30px 20px 0; }
 			.alignright { float: right; margin: 20px 0 20px 20px; }
 			.aligncenter { clear: both; margin: 0 auto 20px; }
 
-			figcaption { color: $grey-color-normal; font-size: 13px; font-style: italic; padding-top: 10px; }
+			figcaption { color: var(--main-text-gr-color); font-size: 13px; font-style: italic; padding-top: 10px; }
 
 			figure { margin-top: 10px; }
 
@@ -170,21 +228,21 @@ body {
 			@import "syntax";
 		}
 
-		.post-footer { @include flexbox(); position: absolute; bottom: 0; left: 0; width: 100%; border-top: 1px solid $grey-color-lightest; background: lighten($grey-color-lightest, 5%); box-shadow: inset 0 10px 10px -9px rgba($black, .08);
-			div { min-height: 48px; font-size: 11px; line-height: 48px; color: $grey-color-light;
-				&.share { position: relative; padding: 0 20px 0 40px; text-transform: uppercase; background: url(../svg/share-icon.svg) no-repeat 20px center; border-right: 1px solid $grey-color-lightest; @include bgsizeNum(10px, 10px); @include transition(background-color .1s ease); cursor: pointer;
-					&:hover { background-color: $background-color; }
-					&.active { background-color: $background-color;
+		.post-footer { @include flexbox(); position: absolute; bottom: 0; left: 0; width: 100%; border-top: 1px solid var(--box-border-color); background: var(--box-bg-color); box-shadow: inset 0 10px 10px -9px var(--box-shadow-color);
+			div { min-height: 48px; font-size: 11px; line-height: 48px; color: var(--main-text-color);
+				&.share { position: relative; padding: 0 20px 0 40px; text-transform: uppercase; background: url(../svg/share-icon.svg) no-repeat 20px center; border-right: 1px solid var(--box-border-color); @include bgsizeNum(10px, 10px); @include transition(background-color .1s ease); cursor: pointer;
+					&:hover { background-color: var(--box-hover-color); }
+					&.active { background-color: var(--box-hover-color);
 						.social-networks { @include flexbox(); }
 					}
-					.social-networks { display: none; position: absolute; top: -48px; left: 50%; width: 100px; box-shadow: 0 0 0 1px $grey-color-lightest, 0 3px 4px rgba($black,.05); @include translate(-50%, 0);
-						li { position: relative; width: 50%; min-height: 50px; background: $white; text-align: center; box-shadow: inset 1px 0 0 $grey-color-lightest; @include transition(background .1s ease);
+					.social-networks { display: none; position: absolute; top: -48px; left: 50%; width: 100px; box-shadow: 0 0 0 1px var(--box-border-color), 0 3px 4px var(--box-shadow-color); @include translate(-50%, 0);
+						li { position: relative; width: 50%; min-height: 50px; background: var(--box-bg-color); text-align: center; box-shadow: inset 1px 0 0 var(--box-border-color); @include transition(background .1s ease);
 							&:first-of-type { box-shadow: none; }
 							&.share-facebook:hover { background: $facebook-brand-color; }
 							&.share-twitter:hover { background: $twitter-brand-color; }
-							&:hover a svg { fill: $white; }
+							&:hover a svg { fill: var(--main-text-color); }
 							a { position: absolute; width: 100%; height: 100%; left: 0; top: 0;
-								svg { display: inline-block; vertical-align: middle; @include transition(fill .1s ease); }
+								svg { display: inline-block; vertical-align: middle; @include transition(fill .1s ease);fill: var(--main-text-gr-color); }
 							}
 						}
 					}
@@ -192,8 +250,8 @@ body {
 				&.tags { width: 100%; padding: 0 10px; text-transform: lowercase;
 					ul { @include flexbox(); @include flex-flow(row wrap); @include justify-content(flex-end);
 						li { margin: 0 0 0 5px;
-							a { color: $grey-color-light; background: $grey-color-lightest; padding: 4px 10px; border-radius: 18px; @include transition(background .1s ease);
-								&:hover { background: lighten($grey-color-lightest, 15%); }
+							a { color: var(--main-text-gr-color); background: var(--box-border-color); padding: 4px 10px; border-radius: 18px; @include transition(background .1s ease);
+								&:hover { background: var(--box-hover-color); }
 							}
 						}
 					}
@@ -202,14 +260,14 @@ body {
 		}
 	}
 
-	.comments { position: relative; margin: 40px 0 0; padding: 40px; border: 1px solid $grey-color-lightest; background: $white; box-shadow: 0 2px 3px rgba($black,.05); }
+	.comments { position: relative; margin: 40px 0 0; padding: 40px; border: 1px solid var(--box-border-color); background: var(--page-bg-color); box-shadow: 0 2px 3px var(--box-shadow-color); }
 
 	.pagination { @include flexbox(); @include justify-content(space-between); position: relative; margin: 40px 0 0;
 		&.next { @include justify-content(flex-end); }
-		.previous, .next { padding: 14px 20px; border: 1px solid $grey-color-lightest; background: $white; box-shadow: 0 2px 3px rgba($black,.05); text-transform: uppercase; font-size: 14px; font-weight: 900; color: $grey-color-normal;
-			&:hover { background: $primary-color; color: $white; }
+		.previous, .next { padding: 14px 20px; border: 1px solid var(--box-border-color); background: var(--box-bg-color); box-shadow: 0 2px 3px var(--box-shadow-color); text-transform: uppercase; font-size: 14px; font-weight: 900; color: var(--main-text-gr-color);
+			&:hover { background: var(--primary-color); color: var(--main-text-color); }
 		}
-		.page_number { position: absolute; left: 50%; top: 50%; @include translate(-50%, -50%); font-size: 12px; color: $grey-color-light; }
+		.page_number { position: absolute; left: 50%; top: 50%; @include translate(-50%, -50%); font-size: 12px; color: var(--main-text-gr-color); }
 	}
 }
 
