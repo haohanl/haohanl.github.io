@@ -16,7 +16,7 @@ $(document).ready( function() {
 	(function($) {
 		function backToTop(userSettings) {
 			
-			var defaultSettings = { backgroundColor: '#000', width: '40px', height: '40px', opacity: '0.2', opacityOnHover: '0.4', positionToAppear: '300' };
+			var defaultSettings = { backgroundColor: '#888', width: '40px', height: '40px', opacity: '0.2', opacityOnHover: '0.6', positionToAppear: '300' };
 			var settings = $.extend({}, defaultSettings, userSettings);
 
 			var backToTopStyle = {

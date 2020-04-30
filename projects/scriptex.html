@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <script src="/assets/js/darkmode-head.js"></script>
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -118,6 +119,13 @@
         </div>
     </div>
 
+    <!-- <input type="button" id="darkmode-toggle" value="ONN" style="color:blue"  onclick="toggle(this);"> -->
+    <label class="darkmode-label" id="darkmode-label"></label>
+    <label class="switch">
+        <input type="checkbox" id="darkmode-switch">
+        <span class="slider round" onclick="modeSwitcher()"></span>
+    </label>
+
     
         
         <div class="mainmenu">
@@ -232,6 +240,7 @@
 <script src="/assets/js/jquery.fitvids.js"></script>
 <script src="/assets/js/svg4everybody.min.js"></script>
 <script src="/assets/js/scripts.js"></script>
+<script src="/assets/js/darkmode.js"></script>
 
 
     </body>
