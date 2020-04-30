@@ -159,6 +159,8 @@
             
                 
             
+                
+            
         </div>
         
     
@@ -197,36 +199,27 @@
 
     <div class="post-content">
         <p><strong>ScriptEx</strong>, with later revisions <strong>ScriptExDee</strong> and <strong>ScriptExDee II</strong>, is a passion project developed in my spare time with the goal of streamlining software installation, system testing, and quality control at <abbr title="PC Case Gear">PCCG</abbr>. ScriptEx and its future revisions were branched from an existing GUI-based <em>Builder Companion</em> program, written by Magnus Hjorth.</p>
-
 <p>The intent was to create a lightweight, portable, and flexible platform with core functionality that could be modified on-site (without recompilation).</p>
-
 <h2 id="main-features">Main Features</h2>
-
 <ul>
-  <li><strong>Asynchronous Operation</strong>: Allows for multithreaded transfer of files using <code class="highlighter-rouge">robocopy</code> and installation of system drivers, manufacturer software, and lighting controllers in  batched jobs.</li>
-  <li><strong>Background Windows Updater</strong>: Updates are downloaded and installed in the background during software setup and system stability testing. Restarts can automatically occur once testing has completed.</li>
-  <li><strong>Portable &amp; Flexible</strong>: Can be configured to be deployed from any removable device and pull the latest software from either a local network or the removable drive itself.</li>
-  <li><strong>Windows Integration</strong>: ScriptEx can read Windows system hardware information, check for activation keys, and self-cleanup when ready for quality control.</li>
+<li><strong>Asynchronous Operation</strong>: Allows for multithreaded transfer of files using <code>robocopy</code> and installation of system drivers, manufacturer software, and lighting controllers in  batched jobs.</li>
+<li><strong>Background Windows Updater</strong>: Updates are downloaded and installed in the background during software setup and system stability testing. Restarts can automatically occur once testing has completed.</li>
+<li><strong>Portable &amp; Flexible</strong>: Can be configured to be deployed from any removable device and pull the latest software from either a local network or the removable drive itself.</li>
+<li><strong>Windows Integration</strong>: ScriptEx can read Windows system hardware information, check for activation keys, and self-cleanup when ready for quality control.</li>
 </ul>
-
 <h2 id="dependencies">Dependencies</h2>
-
 <p>ScriptEx is written in C# on .NET 4.7.2. This platform was chosen due to its closeness to the Windows OS, easy access to <abbr title="Windows Management Instruments">WMI</abbr>, and relatively simple multithreading.</p>
-
-<p><a href="https://github.com/Fody/Costura" target="_blank">Fody Costura</a> is utilised during compilation to bundle required assemblies (<code class="highlighter-rouge">.dll</code> files) into a single executable. Required assemblies include:</p>
+<p><a href="https://github.com/Fody/Costura">Fody Costura</a> is utilised during compilation to bundle required assemblies (<code>.dll</code> files) into a single executable. Required assemblies include:</p>
 <ul>
-  <li><a href="https://github.com/aaubry/YamlDotNet" target="_blank">YamlDotNet</a></li>
-  <li><a href="https://docs.microsoft.com/en-us/windows/win32/wua_sdk/windows-update-agent-object-model" target="_blank">WUApiLib</a></li>
-  <li>Microsoft.Win32.TaskScheduler</li>
-  <li>Microsoft.Win32.Registry</li>
-  <li>System.Security.AccessControl</li>
-  <li>System.Security.Principal.Windows</li>
+<li><a href="https://github.com/aaubry/YamlDotNet">YamlDotNet</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/win32/wua_sdk/windows-update-agent-object-model">WUApiLib</a></li>
+<li>Microsoft.Win32.TaskScheduler</li>
+<li>Microsoft.Win32.Registry</li>
+<li>System.Security.AccessControl</li>
+<li>System.Security.Principal.Windows</li>
 </ul>
-
 <h2 id="repository">Repository</h2>
-
 <p><a href="https://github.com/PandasaurusR/ScriptEx">https://github.com/PandasaurusR/ScriptEx</a></p>
-
 
     </div>
 </article>

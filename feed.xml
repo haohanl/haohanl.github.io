@@ -5,18 +5,15 @@
     <description>Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Apr 2020 13:08:25 +0000</pubDate>
-    <lastBuildDate>Thu, 30 Apr 2020 13:08:25 +0000</lastBuildDate>
-    <generator>Jekyll v3.8.6</generator>
+    <pubDate>Thu, 30 Apr 2020 14:43:12 +0000</pubDate>
+    <lastBuildDate>Thu, 30 Apr 2020 14:43:12 +0000</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>Introductions</title>
         <description>&lt;p&gt;Oh wow would you look at that. There’s a website here now.&lt;/p&gt;
-
 &lt;p&gt;Feel free to check back every-so-often and there’s a non-zero chance that there may be something new to see.&lt;/p&gt;
-
 &lt;p&gt;In the meantime, feel free to click around and see if anything breaks.&lt;/p&gt;
-
 </description>
         <pubDate>Fri, 19 Apr 2019 18:17:00 +0000</pubDate>
         <link>/fluff/introductions.html</link>
