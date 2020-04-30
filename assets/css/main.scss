@@ -167,8 +167,9 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 		}
 
 		.post-content { font-size: 16px; line-height: 26px; 
-			abbr { border-bottom: 1px dotted var(--main-text-color); text-decoration: none; cursor: help; @include transition(all 0.3s ease); }
+			abbr { border-bottom: 1px dotted var(--main-text-color); text-decoration: none; cursor: help; @include transition(border-bottom 0.3s ease); }
 			code, kbd, pre { margin: 0; font-family: monospace; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; background: none; }
+			code {@include transition(background 0.3s ease, border 0.3s ease);}
 			address, cite, var { font-style: italic; }
 			blockquote { margin: 40px 0; padding-left: 20px; font-style: italic; border-left: 3px solid var(--main-text-it-color); color: var(--main-text-it-color); @include transition(all 0.3s ease); }
 
@@ -193,7 +194,7 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 				&:hover { color: var(--link-hover-color); border-bottom: 2px solid var(--link-hover-color);}
 
 				img { width: inherit; height: inherit; @include transition(all 0.1s ease); @include border(0px,solid,var(--primary-color),all);
-					&:hover { @include border(3px,solid,var(--primary-color),all); @include scale(1.05); opacity: 0.8; @include simple-shadow() } 
+					&:hover { @include border(3px,solid,var(--primary-color),all); @include scale(1.05); opacity: 0.8; @include simple-shadow(); } 
 				}
 			}
 
@@ -226,7 +227,10 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 			figure { margin-top: 10px; }
 
 			img { width: inherit; }
-			
+
+			.archive {
+				a { text-transform: uppercase; }
+			}			
 
 			@import "syntax";
 		}

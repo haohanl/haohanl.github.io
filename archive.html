@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+
+<article class="post page single" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <h2 itemprop="name headline">Post Archive</h2>
+    </header>
+        
+    <div class="post-content">
+        <p>All of my posts in one convenient page.</p>
+
+        {% if site.categories %}
+            <h2 id="by-cat"><strong>Sort by Category</strong></h3>
+            {% assign sorted_categories = site.categories | sort %}
+            {% for category in sorted_categories %}
+                <div class="archive">
+                    <h5 id="{{category | first}}"><strong><a href="/{{site.category_dir}}/{{category | first}}/">{{ category | first }}</a></strong></h3>
+                </div>
+                <ul>
+                    {% for post in category.last %}
+                        <li><a href="{{ post.url }}">{{ post.date | date: "%-d %b, %Y" }} – {{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        {% endif %}
+
+        {% if site.tags %}
+            <h2 id="by-tag"><strong>Sort by Tag</strong></h3>
+            {% assign sorted_tags = site.tags | sort %}
+            {% for tag in sorted_tags %}
+                <div class="archive">
+                    <h5 id="{{category | first}}"><strong><a href="/{{site.tag_dir}}/{{tag | first}}/">{{ tag | first }}</a></strong></h3>
+                </div>
+                <ul>
+                    {% for post in tag.last %}
+                        <li><a href="{{ post.url }}">{{ post.date | date: "%-d %b, %Y" }} – {{ post.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        {% endif %}
+    </div>
+</article>
