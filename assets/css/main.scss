@@ -120,7 +120,7 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 	}
 }
 
-.the-content { margin-left: 350px;
+.the-content { margin-left: 350px; 
 	& > h1 { text-transform: uppercase; color: var(--main-text-em-color); letter-spacing: 0.1em; font-size: 12px; font-weight: 400; margin: 0 0 20px; text-align: center; }
 	.search { position: relative; margin: 0 0 20px; border: 1px solid var(--box-border-color); background: var(--box-bg-color); box-shadow: 0 2px 3px var(--box-shadow-color), inset 6px 0 0 var(--box-border-color); @include placeholder(var(--main-text-gr-color), italic); caret-color: var(--main-text-color); @include transition(all 0.3s ease);
 		& > div { @include flexbox(); overflow: hidden;
@@ -159,22 +159,22 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 					}
 				}
 			}
-			h1, h2 { font-size: 30px; font-weight: 900; margin: 0 0 20px; color: var(--main-text-em-color);
-				a { color: var(--main-text-em-color); @include transition(color .1s ease);
+			h1, h2 { font-size: 30px; font-weight: 900; margin: 0 0 20px; color: var(--main-text-em-color); @include transition(all .3s ease);
+				a { color: var(--main-text-em-color); @include transition(all 0.3s ease);
 					&:hover { color: var(--primary-color); }
 				}
 			}
 		}
 
-		.post-content { font-size: 16px; line-height: 26px;
-			abbr { border-bottom: 1px dotted var(--main-text-color); text-decoration: none; cursor: help; }
+		.post-content { font-size: 16px; line-height: 26px; 
+			abbr { border-bottom: 1px dotted var(--main-text-color); text-decoration: none; cursor: help; @include transition(all 0.3s ease); }
 			code, kbd, pre { margin: 0; font-family: monospace; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; background: none; }
 			address, cite, var { font-style: italic; }
 			blockquote { margin: 40px 0; padding-left: 30px; font-style: italic; border-left: 3px solid var(--main-text-it-color); background: var(--box-hover-color); color: var(--main-text-it-color); }
 
-			em, strong { color: var(--main-text-em-color); }
+			em, strong { color: var(--main-text-em-color); @include transition(all 0.3s ease); }
 
-			h1, h2, h3, h4, h5, h6 { position: relative; left: -40px; padding: 0 0 0 40px; margin-top: 2ex; color: var(--main-text-em-color); }
+			h1, h2, h3, h4, h5, h6 { position: relative; left: -40px; padding: 0 0 0 40px; margin-top: 2ex; color: var(--main-text-em-color); @include transition(all 0.3s ease); }
 			h1 { font-size: 30px; }
 			h2 { font-size: 26px; }
 			h3 { font-size: 22px; }
@@ -210,7 +210,7 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 
 			ul { list-style-type: disc; list-style-position: inside; }
 
-			p { margin: 15px 0; line-height: 27px;
+			p { margin: 15px 0; line-height: 27px; 
 				& > code { font-size: 14px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
 			}
 
