@@ -98,7 +98,7 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 		li { margin: 5px;
 			a { @include flexbox(); @include align-items(); @include justify-content(); width: 40px; height: 40px; background: var(--box-bg-color); border-radius: 50%; box-shadow: 0 2px 3px var(--box-shadow-color); @include transition(all .3s ease);
 				&:hover { background: var(--primary-color); }
-				svg * { fill: var(--main-text-color);  }
+				svg * { fill: var(--main-text-color); @include transition(all .3s ease) }
 			}
 		}
 	}
