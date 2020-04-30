@@ -70,7 +70,10 @@ paginate: 10
 paginate_path: "/page:num/"
 
 # Conversion
-markdown: kramdown
+markdown: CommonMarkGhPages
+commonmark:
+  options: ["SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 excerpt_separator: <!--more-->
 
 # Assets Settings

@@ -61,15 +61,24 @@ These are just a few of the *available* **configuration** options. Many configur
 
 #### Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iWowJBRMtpc" frameborder="0" allowfullscreen></iframe>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iWowJBRMtpc" frameborder="0" allowfullscreen>
+</iframe>
+</p>
 
 #### Default Code Block
 
-    This is code blog.
+```js
+This is code blog.
+
+test
+
+test 2
+```
 
 #### Styled Code Block
 	
-{% highlight ruby linenos %}
+```ruby
 #!/usr/bin/ruby
 $LOAD_PATH << '.'
 require "support"
@@ -88,7 +97,7 @@ puts Week::FIRST_DAY
 Week.weeks_in_month
 Week.weeks_in_year
 d1.no_of_months
-{% endhighlight %}
+```
 	
 #### Definition Lists
 	

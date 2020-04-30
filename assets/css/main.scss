@@ -170,7 +170,10 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 			abbr { border-bottom: 1px dotted var(--main-text-color); text-decoration: none; cursor: help; @include transition(all 0.3s ease); }
 			code, kbd, pre { margin: 0; font-family: monospace; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; background: none; }
 			address, cite, var { font-style: italic; }
-			blockquote { margin: 40px 0; padding-left: 30px; font-style: italic; border-left: 3px solid var(--main-text-it-color); background: var(--box-hover-color); color: var(--main-text-it-color); }
+			blockquote { margin: 40px 0; padding-left: 20px; font-style: italic; border-left: 3px solid var(--main-text-it-color); color: var(--main-text-it-color); @include transition(all 0.3s ease); }
+
+			pre { background: var(--box-hover-color); @include transition(background .3s ease); counter-reset: line;
+			}
 
 			em, strong { color: var(--main-text-em-color); @include transition(all 0.3s ease); }
 
@@ -215,10 +218,10 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 			}
 
 			.alignleft { float: left; margin: 20px 30px 20px 0; }
-			.alignright { float: right; margin: 20px 0 20px 20px; }
-			.aligncenter { clear: both; margin: 0 auto 20px; }
+			.alignright { float: right; margin: 10px 0 20px 0px; }
+			.aligncenter { clear: both; margin: 10px auto 0px; }
 
-			figcaption { color: var(--main-text-gr-color); font-size: 13px; font-style: italic; padding-top: 10px; }
+			figcaption { color: var(--main-text-gr-color); font-size: 13px; font-style: italic; padding-top: 3px; }
 
 			figure { margin-top: 10px; }
 

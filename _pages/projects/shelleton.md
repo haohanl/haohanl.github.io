@@ -6,7 +6,7 @@ permalink: "/projects/shelleton"
 
 
 
-**Shelleton** is a simple C# project skeleton with the ability to easily access and execute internal class methods from the CLI. This project is inspired by the work of [John Atten](https://github.com/TypecastException/ConsoleApplicationBase){:target="_blank"}.
+**Shelleton** is a simple C# project skeleton with the ability to easily access and execute internal class methods from the CLI. This project is inspired by the work of [John Atten](https://github.com/TypecastException/ConsoleApplicationBase).
 
 
 
@@ -23,7 +23,7 @@ Shelleton is written in C# as a collection of class files. There are no further 
 
 ## Repository
 
-[https://github.com/PandasaurusR/Shelleton](https://github.com/PandasaurusR/Shelleton){:target="_blank"}
+[https://github.com/PandasaurusR/Shelleton](https://github.com/PandasaurusR/Shelleton)
 
 
 
