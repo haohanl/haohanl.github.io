@@ -1,17 +1,23 @@
-gudo: false
+sudo: false
+
 language: ruby
+
 cache: bundler
+
 rvm:
 - 2.6
+
 branches:
   only:
   - jekyll
+
 install:
 - gem install bundler
 - bundle install
+
 script:
 - bundle exec jekyll build
-#- bundle exec htmlproofer ./_site --disable-external
+
 after_success:
 - git clone https://$GH_REF
 - cd $(basename ${GH_REF%.git})
@@ -22,6 +28,7 @@ after_success:
 - git add -A .
 - git commit -m "Generated Jekyll Site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
 - git push -f "https://${DEPLOY_KEY}@${GH_REF}" ${TARGET_BRANCH} > /dev/null 2>&1
+
 env:
   global:
   - JEKYLL_ENV=production

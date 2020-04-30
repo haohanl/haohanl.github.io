@@ -61,6 +61,9 @@ baseurl: ""
 # Includes
 include: ["_pages"]
 
+# Excludes
+exclude: [vendor]
+
 # Outputting
 permalink: /:categories/:title.html
 category_dir: categories
