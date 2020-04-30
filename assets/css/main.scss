@@ -8,7 +8,7 @@
 /* Darkmode */
 html, html[data-theme="dark"] { 
 	--page-bg-color: #111;
-	--primary-color: #007be0;
+	--primary-color: #b60000;
 
 	--main-text-color: #ddd;
 	--main-text-gr-color: #666;
@@ -20,8 +20,8 @@ html, html[data-theme="dark"] {
 	--box-border-color: #111;
 	--box-shadow-color: rgba(0,0,0,0.4);
 
-	--link-color: #2491eb;
-	--link-hover-color: #59b3fc;
+	--link-color: #b60000;
+	--link-hover-color: #c24040;
 
 	@include transition(all 0.3s ease);
 	background: url(/media/bg/bg-dark.png); 
@@ -98,7 +98,7 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 		li { margin: 5px;
 			a { @include flexbox(); @include align-items(); @include justify-content(); width: 40px; height: 40px; background: var(--box-bg-color); border-radius: 50%; box-shadow: 0 2px 3px var(--box-shadow-color); @include transition(all .3s ease);
 				&:hover { background: var(--primary-color); }
-				svg * { fill: var(--main-text-color); @include transition(all .3s ease); }
+				svg * { fill: var(--main-text-color);  }
 			}
 		}
 	}
