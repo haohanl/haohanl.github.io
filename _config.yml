@@ -80,7 +80,7 @@ commonmark:
 excerpt_separator: <!--more-->
 
 jekyll_tidy:
-  compress_html: true
+  compress_html: false
 
 # Assets Settings
 sass:
