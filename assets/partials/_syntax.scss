@@ -1,6 +1,6 @@
 div.highlight { border: 1px solid var(--main-text-gr-color); margin-top: 10px; }
 
-.highlight { background: var(--box-hover-color); padding: 6px 8px ; font-size: medium; line-height: 1.5; @include transition(background .3s ease);
+.highlight { background: var(--box-hover-color); padding: 6px 8px; font-size: small; line-height: 1.5; @include transition(background .3s ease);
 	.lineno { padding: 0 10px 0 0; color: var(--main-text-gr-color); }
 	.highlighter-rouge & { background: #eef; }
 	.c     { color: #998; font-style: italic } // Comment

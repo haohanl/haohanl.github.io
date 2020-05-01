@@ -168,7 +168,7 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 
 		.post-content { font-size: 16px; line-height: 26px; 
 			abbr { border-bottom: 1px dotted var(--main-text-color); text-decoration: none; cursor: help; @include transition(border-bottom 0.3s ease); }
-			code, kbd, pre { margin: 0; font-family: monospace; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; background: none; }
+			code, kbd, pre { margin: 0; font-family: 'Roboto Mono', monospace; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; background: none; }
 			code {@include transition(background 0.3s ease, border 0.3s ease);}
 			address, cite, var { font-style: italic; }
 			blockquote { margin: 40px 0; padding-left: 20px; font-style: italic; border-left: 3px solid var(--main-text-it-color); color: var(--main-text-it-color); @include transition(all 0.3s ease); }
@@ -201,21 +201,21 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 			ul, ol { margin: 15px 0;
 				ul, ol { padding: 0 0 0 20px; }
 				li { margin: 5px 0;
-					& > code { font-size: 14px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
+					& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
 				}
 			}
 
 			dl { margin: 40px 0;
 				dt { margin: 10px 0 0; font-size: 18px; font-weight: 700; }
 				dd { margin: 5px 0;
-					& > code { font-size: 14px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
+					& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
 				}
 			}
 
 			ul { list-style-type: disc; list-style-position: inside; }
 
 			p { margin: 15px 0; line-height: 27px; 
-				& > code { font-size: 14px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
+				& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
 			}
 
 			.alignleft { float: left; margin: 20px 30px 20px 0; }
