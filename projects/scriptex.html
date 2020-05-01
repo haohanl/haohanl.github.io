@@ -1,1 +1,109 @@
-<!DOCTYPE html> <html> <script src="/assets/js/darkmode-head.js"></script> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>ScriptEx(Dee|Dee II)? | Haohan Liu &mdash; CS Student &amp; System Builder </title> <meta property="og:title" content="ScriptEx(Dee|Dee II)? | Haohan Liu &mdash; CS Student &amp; System Builder "/> <meta name="twitter:title" content="ScriptEx(Dee|Dee II)? | Haohan Liu &mdash; CS Student &amp; System Builder "/> <meta name="description" content="Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts."> <meta name="description" property="og:description" content="Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts."/> <meta name="twitter:description" content="Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts."/> <meta name="twitter:card" content="summary_large_image"/> <meta property="og:url" content="/projects/scriptex"/> <meta property="og:image" content=""/> <meta name="twitter:image" content=""/> <meta name="author" content="Haohan Liu"/> <meta name="copyright" content="Copyright by Haohan Liu. All Rights Reserved."/> <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/> <link rel="stylesheet" href="/assets/css/main.css"> <link rel="canonical" href="/projects/scriptex"> <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml"> </head> <body> <div class="wrapper"> <aside class="user-profile fixed" role="complementary"> <div class="burger"> <input class="trigger hidden" id="toggleBurger" type="checkbox"/> <label for="toggleBurger"> <span>Navigation</span> </label> </div> <div class="compact-header"> <a class="avatar" href="/"><img alt="Avatar" src="/media/profile/profile.jpg"/></a> <div class="my-info"> <strong class="my-name">Haohan Liu</strong> <span class="my-job-title">CS Student & System Builder</span> </div> </div> <label class="darkmode-label" id="darkmode-label"></label> <label class="switch"> <input type="checkbox" id="darkmode-switch"> <span class="slider round" onclick="modeSwitcher()"></span> </label> <div class="mainmenu"> <a href="/">Home</a> <a href="/projects">Projects</a> <a href="/about">About</a> <a href="/archive/">Post Archive</a> </div> <p class="about-me">Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.</p> <ul class="socials"> <li><a href="https://github.com/PandasaurusR"><svg title="github" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#github-icon"></use></svg></a></li> <li><a href="mailto:haohan@outlook.com.au"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#email-icon"></use></svg></a></li> <li><a href="/feed.xml"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#rss-icon"></use></svg></a></li> </ul> </aside> <main class="the-content" role="main"> <div class="search" role="search"> <div> <div class="show-results-count">0 Results</div> <div class="search-holder"> <input type="text" id="search-input" placeholder="search for..."/> </div> </div> <ul id="results-container" class="results-container"></ul> </div> <article class="post page single" role="article" itemscope itemtype="http://schema.org/BlogPosting"> <header class="post-header"> <h2 itemprop="name headline">ScriptEx(Dee|Dee II)?</h2> </header> <div class="post-content"> <p><strong>ScriptEx</strong>, with later revisions <strong>ScriptExDee</strong> and <strong>ScriptExDee II</strong>, is a passion project developed in my spare time with the goal of streamlining software installation, system testing, and quality control at <abbr title="PC Case Gear">PCCG</abbr>. ScriptEx and its future revisions were branched from an existing GUI-based <em>Builder Companion</em> program, written by Magnus Hjorth.</p> <p>The intent was to create a lightweight, portable, and flexible platform with core functionality that could be modified on-site (without recompilation).</p> <h2 id="main-features">Main Features</h2> <ul> <li><strong>Asynchronous Operation</strong>: Allows for multithreaded transfer of files using <code>robocopy</code> and installation of system drivers, manufacturer software, and lighting controllers in batched jobs.</li> <li><strong>Background Windows Updater</strong>: Updates are downloaded and installed in the background during software setup and system stability testing. Restarts can automatically occur once testing has completed.</li> <li><strong>Portable &amp; Flexible</strong>: Can be configured to be deployed from any removable device and pull the latest software from either a local network or the removable drive itself.</li> <li><strong>Windows Integration</strong>: ScriptEx can read Windows system hardware information, check for activation keys, and self-cleanup when ready for quality control.</li> </ul> <h2 id="dependencies">Dependencies</h2> <p>ScriptEx is written in C# on .NET 4.7.2. This platform was chosen due to its closeness to the Windows OS, easy access to <abbr title="Windows Management Instruments">WMI</abbr>, and relatively simple multithreading.</p> <p><a href="https://github.com/Fody/Costura">Fody Costura</a> is utilised during compilation to bundle required assemblies (<code>.dll</code> files) into a single executable. Required assemblies include:</p> <ul> <li><a href="https://github.com/aaubry/YamlDotNet">YamlDotNet</a></li> <li><a href="https://docs.microsoft.com/en-us/windows/win32/wua_sdk/windows-update-agent-object-model">WUApiLib</a></li> <li>Microsoft.Win32.TaskScheduler</li> <li>Microsoft.Win32.Registry</li> <li>System.Security.AccessControl</li> <li>System.Security.Principal.Windows</li> </ul> <h2 id="repository">Repository</h2> <p><a href="https://github.com/PandasaurusR/ScriptEx">https://github.com/PandasaurusR/ScriptEx</a></p> </div> </article> </main> </div> <script src="/assets/js/jquery-1.12.2.min.js"></script> <script src="/assets/js/backtotop.js"></script> <script src="/assets/js/lunr.min.js"></script> <script src="/assets/js/lunr-feed.js"></script> <script src="/assets/js/jquery.fitvids.js"></script> <script src="/assets/js/svg4everybody.min.js"></script> <script src="/assets/js/scripts.js"></script> <script src="/assets/js/darkmode.js"></script> </body> </html>
+<!DOCTYPE html>
+<html>
+  <script src="/assets/js/darkmode-head.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ScriptEx(Dee|Dee II)? | Haohan Liu &mdash; CS Student &amp; System Builder </title>
+    <meta property="og:title" content="ScriptEx(Dee|Dee II)? | Haohan Liu &mdash; CS Student &amp; System Builder " />
+    <meta name="twitter:title" content="ScriptEx(Dee|Dee II)? | Haohan Liu &mdash; CS Student &amp; System Builder " />
+    <meta name="description" content="Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.">
+    <meta name="description" property="og:description" content="Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts." />
+    <meta name="twitter:description" content="Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="/projects/scriptex" />
+    <meta property="og:image" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="author" content="Haohan Liu" />
+    <meta name="copyright" content="Copyright by Haohan Liu. All Rights Reserved." />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="/projects/scriptex">
+    <link rel="alternate" type="application/rss+xml" title="" href="/feed.xml">
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="user-profile fixed" role="complementary">
+        <div class="burger">
+          <input class="trigger hidden" id="toggleBurger" type="checkbox" />
+          <label for="toggleBurger">
+            <span>Navigation</span>
+          </label>
+        </div>
+        <div class="compact-header">
+          <a class="avatar" href="/"><img alt="Avatar" src="/media/profile/profile.jpg" /></a>
+          <div class="my-info">
+            <strong class="my-name">Haohan Liu</strong>
+            <span class="my-job-title">CS Student & System Builder</span>
+          </div>
+        </div>
+        <label class="darkmode-label" id="darkmode-label"></label>
+        <label class="switch">
+          <input type="checkbox" id="darkmode-switch">
+          <span class="slider round" onclick="modeSwitcher()"></span>
+        </label>
+        <div class="mainmenu">
+          <a href="/" >Home</a>
+          <a href="/projects" >Projects</a>
+          <a href="/about" >About</a>
+          <a href="/archive/" >Post Archive</a>
+        </div>
+        <p class="about-me">Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.</p>
+        <ul class="socials">
+          <li><a href="https://github.com/PandasaurusR"><svg title="github" width="16" height="16" ><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#github-icon"></use></svg></a></li>
+          <li><a href="mailto:haohan@outlook.com.au"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#email-icon"></use></svg></a></li>
+          <li><a href="/feed.xml"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#rss-icon"></use></svg></a></li>
+        </ul>
+      </aside>
+      <main class="the-content" role="main">
+        <div class="search" role="search">
+          <div>
+            <div class="show-results-count">0 Results</div>
+            <div class="search-holder">
+              <input type="text" id="search-input" placeholder="search for..." />
+            </div>
+          </div>
+          <ul id="results-container" class="results-container"></ul>
+        </div>
+        <article class="post page single" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+          <header class="post-header">
+            <h2 itemprop="name headline">ScriptEx(Dee|Dee II)?</h2>
+          </header>
+          <div class="post-content">
+            <p><strong>ScriptEx</strong>, with later revisions <strong>ScriptExDee</strong> and <strong>ScriptExDee II</strong>, is a passion project developed in my spare time with the goal of streamlining software installation, system testing, and quality control at <abbr title="PC Case Gear">PCCG</abbr>. ScriptEx and its future revisions were branched from an existing GUI-based <em>Builder Companion</em> program, written by Magnus Hjorth.</p>
+            <p>The intent was to create a lightweight, portable, and flexible platform with core functionality that could be modified on-site (without recompilation).</p>
+            <h2 id="main-features">Main Features</h2>
+            <ul>
+              <li><strong>Asynchronous Operation</strong>: Allows for multithreaded transfer of files using <code>robocopy</code> and installation of system drivers, manufacturer software, and lighting controllers in  batched jobs.</li>
+              <li><strong>Background Windows Updater</strong>: Updates are downloaded and installed in the background during software setup and system stability testing. Restarts can automatically occur once testing has completed.</li>
+              <li><strong>Portable &amp; Flexible</strong>: Can be configured to be deployed from any removable device and pull the latest software from either a local network or the removable drive itself.</li>
+              <li><strong>Windows Integration</strong>: ScriptEx can read Windows system hardware information, check for activation keys, and self-cleanup when ready for quality control.</li>
+            </ul>
+            <h2 id="dependencies">Dependencies</h2>
+            <p>ScriptEx is written in C# on .NET 4.7.2. This platform was chosen due to its closeness to the Windows OS, easy access to <abbr title="Windows Management Instruments">WMI</abbr>, and relatively simple multithreading.</p>
+            <p><a href="https://github.com/Fody/Costura">Fody Costura</a> is utilised during compilation to bundle required assemblies (<code>.dll</code> files) into a single executable. Required assemblies include:</p>
+            <ul>
+              <li><a href="https://github.com/aaubry/YamlDotNet">YamlDotNet</a></li>
+              <li><a href="https://docs.microsoft.com/en-us/windows/win32/wua_sdk/windows-update-agent-object-model">WUApiLib</a></li>
+              <li>Microsoft.Win32.TaskScheduler</li>
+              <li>Microsoft.Win32.Registry</li>
+              <li>System.Security.AccessControl</li>
+              <li>System.Security.Principal.Windows</li>
+            </ul>
+            <h2 id="repository">Repository</h2>
+            <p><a href="https://github.com/PandasaurusR/ScriptEx">https://github.com/PandasaurusR/ScriptEx</a></p>
+          </div>
+        </article>
+      </main>
+    </div>
+    <script src="/assets/js/jquery-1.12.2.min.js"></script>
+    <script src="/assets/js/backtotop.js"></script>
+    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/lunr-feed.js"></script>
+    <script src="/assets/js/jquery.fitvids.js"></script>
+    <script src="/assets/js/svg4everybody.min.js"></script>
+    <script src="/assets/js/scripts.js"></script>
+    <script src="/assets/js/darkmode.js"></script>
+  </body>
+</html>
