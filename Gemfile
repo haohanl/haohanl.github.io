@@ -20,6 +20,7 @@ gem "liquid-c"
 group :jekyll_plugins do
     gem "jekyll-paginate", "~> 1.1.0"
     gem "jekyll-commonmark-ghpages"
+    gem "jekyll-tidy"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

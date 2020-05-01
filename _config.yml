@@ -79,8 +79,10 @@ commonmark:
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 excerpt_separator: <!--more-->
 
+jekyll_tidy:
+  compress_html: true
+
 # Assets Settings
 sass:
   sass_dir: assets/partials
   style: compressed
-
