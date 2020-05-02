@@ -61,11 +61,11 @@ Gains will naturally depend on the amount of liquid on your site. From my resear
 
 
 ### 3. Replace `kramdown` with `commonmark`
-From my testing, kramdown is _adequate_, but not the fastest in the compile time drag race. Here is where commonmark leaves the competition in the dust.
+From my testing, kramdown is _adequate_, but not the fastest in the compile time drag race. Here is where [commonmark](https://github.com/jekyll/jekyll-commonmark) leaves the competition in the dust.
 
 Do note however that commonmark doesnt support block attributes like `{:target="_blank"}`. HTML tags will need to be used instead if you really went wild with block attributes. 
 
-To further increase compile speeds, I went with the GitHub Pages version of commonmark. This will sanitize your markdown according to the GitHub Pages spec. Things like `iframe` tags will break, but I wasn't planning on using those anyway. 
+I went with the GitHub Pages version of commonmark, [jekyll-commonmark-ghpages](https://github.com/github/jekyll-commonmark-ghpages). This will sanitize your markdown according to the GitHub Pages spec. Things like `iframe` tags will break, but I wasn't planning on using those anyway. 
 
 I dropped the following into my `Gemfile`.
 
@@ -102,7 +102,7 @@ I was curious to see what the converted HTML of my site looked like, and I nearl
 Apparently indents went right out the window and we've scorched the Geneva convention. This is a crime against humanity. 
 
 ### 1. Install `jekyll-tidy`
-Here's how you fix the warcrime shown above. Install a handy little gem called jekyll-tidy into your `Gemfile`.
+Here's how you fix the warcrime shown above. Install a handy little gem called [jekyll-tidy](https://github.com/apsislabs/jekyll-tidy) into your `Gemfile`.
 
 ```rb
 gem "jekyll-tidy"
@@ -126,7 +126,7 @@ Immediately after recompiling, every is right in the world once more. It's truly
 Compile time `🔥 0.294s / 🔥🔥 0.267s`. First compile time also dropped as a side effect, though there is now a little bit more overhead on subsequent compiles. 
 
 
-### 2. Minify Everything
+### 2. Optional Minification
 It was at this point I discovered jekyll-tidy has a compression setting. Given GitHub Pages has limited bandwidth, I though this could be potentially useful. Add the following to your `_config.yml` to enable this setting.
 
 ```yml
