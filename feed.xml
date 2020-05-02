@@ -5,13 +5,13 @@
       <description>Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.</description>
       <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Fri, 01 May 2020 15:42:10 +0000</pubDate>
-      <lastBuildDate>Fri, 01 May 2020 15:42:10 +0000</lastBuildDate>
+      <pubDate>Sat, 02 May 2020 08:39:26 +0000</pubDate>
+      <lastBuildDate>Sat, 02 May 2020 08:39:26 +0000</lastBuildDate>
       <generator>Jekyll v4.0.0</generator>
       <item>
         <title>Optimising a Jekyll Site</title>
-        <description>&lt;p&gt;From the moment this site was first erected upon the mighty pedastal that is my GitHub Pages and hostname registered with Google Domains, I got myself a jekyll template and got to work making a neat little personal portfolio.&lt;/p&gt;
-          &lt;p&gt;Here’s what I learnt after spending a day optimising the shoddy state of the template I got.&lt;/p&gt;
+        <description>&lt;p&gt;From the moment this site was first erected upon the mighty pedastal that is GitHub Pages, I got myself a jekyll template and got to work making a neat little personal portfolio.&lt;/p&gt;
+          &lt;p&gt;Here’s what I learnt after a spending day optimising the shoddy state of the template.&lt;/p&gt;
           &lt;!--more--&gt;
           &lt;h2 id=&quot;pre-optimisation&quot;&gt;Pre-optimisation&lt;/h2&gt;
           &lt;p&gt;This my compile time before I began to optimise the site, as logged by running&lt;br /&gt;
@@ -93,10 +93,17 @@
           &lt;p&gt;After recompiling, my pages became one huge block of raw unfiltered hatred in HTML form. Good thing I’m not the browser interpreting this.&lt;/p&gt;
           &lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;main&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;the-content&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;search&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;search&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;show-results-count&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;0 Results&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;search-holder&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;search-input&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;results-container&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;results-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/ul&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
           &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-          &lt;p&gt;Compile time &lt;code&gt;⌛ 0.386s / ⌛⌛ 0.367s&lt;/code&gt;. Minifying a whole site definitely adds to the compile time, but it does &lt;em&gt;slightly&lt;/em&gt; improve site responsiveness in a &lt;em&gt;not at all scientific&lt;/em&gt; side to side comparison.&lt;/p&gt;
+          &lt;p&gt;Compile time &lt;code&gt;⌛ 0.386s / ⌛⌛ 0.367s&lt;/code&gt;. Minifying a whole site definitely adds to the compile time, but it does &lt;em&gt;slightly&lt;/em&gt; improve site responsiveness in a &lt;em&gt;not at all scientific&lt;/em&gt; side to side comparison. I won’t be using this feature in deployment however.&lt;/p&gt;
+          &lt;h3 id=&quot;exclude-codejekyll-tidycode-from-javascript&quot;&gt;3. Exclude &lt;code&gt;jekyll-tidy&lt;/code&gt; from Javascript&lt;/h3&gt;
+          &lt;p&gt;I did discover that jekyll-tidy broke some of my javascript. To fix that issue, my &lt;code&gt;_config.yml&lt;/code&gt; contains the following.&lt;/p&gt;
+          &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;jekyll_tidy&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;exclude&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;assets/js/*&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+          &lt;span class=&quot;na&quot;&gt;compress_html&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
+          &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;p&gt;There is negligle impact from doing this in regards to compile time.&lt;/p&gt;
           &lt;h2 id=&quot;post-optimisation&quot;&gt;Post Optimisation&lt;/h2&gt;
           &lt;p&gt;After optimising my site, my compile time went from &lt;code&gt;🐌 0.744s / 🐌🐌 0.664s&lt;/code&gt; to a blazing fast &lt;code&gt;🔥 0.294s / 🔥🔥 0.267s&lt;/code&gt;. That is a &lt;strong&gt;2.5x&lt;/strong&gt; improvement in site compile times. As an added bonus, my output HTML doesn’t look like absolute trash.&lt;/p&gt;
-          &lt;p&gt;I won’t be minifying my output for now, given the impact is negligible when hosted on GitHub Pages for now. I may turn it on in the future when it is warranted however.&lt;/p&gt;
+          &lt;p&gt;That’s me done for the evening. Peace.&lt;/p&gt;
         </description>
         <pubDate>Wed, 01 May 2019 19:45:00 +0000</pubDate>
         <link>/jekyll/optimising-jekyll.html</link>

@@ -77,8 +77,8 @@
             <h2 itemprop="name headline">Optimising a Jekyll Site</h2>
           </header>
           <div class="post-content">
-            <p>From the moment this site was first erected upon the mighty pedastal that is my GitHub Pages and hostname registered with Google Domains, I got myself a jekyll template and got to work making a neat little personal portfolio.</p>
-            <p>Here’s what I learnt after spending a day optimising the shoddy state of the template I got.</p>
+            <p>From the moment this site was first erected upon the mighty pedastal that is GitHub Pages, I got myself a jekyll template and got to work making a neat little personal portfolio.</p>
+            <p>Here’s what I learnt after a spending day optimising the shoddy state of the template.</p>
             <!--more-->
             <h2 id="pre-optimisation">Pre-optimisation</h2>
             <p>This my compile time before I began to optimise the site, as logged by running<br />
@@ -200,16 +200,27 @@ _layouts/error.html          |     1 |   0.06K | 0.000
 </code></pre>
               </div>
             </div>
-            <p>Compile time <code>⌛ 0.386s / ⌛⌛ 0.367s</code>. Minifying a whole site definitely adds to the compile time, but it does <em>slightly</em> improve site responsiveness in a <em>not at all scientific</em> side to side comparison.</p>
+            <p>Compile time <code>⌛ 0.386s / ⌛⌛ 0.367s</code>. Minifying a whole site definitely adds to the compile time, but it does <em>slightly</em> improve site responsiveness in a <em>not at all scientific</em> side to side comparison. I won’t be using this feature in deployment however.</p>
+            <h3 id="exclude-codejekyll-tidycode-from-javascript">3. Exclude <code>jekyll-tidy</code> from Javascript</h3>
+            <p>I did discover that jekyll-tidy broke some of my javascript. To fix that issue, my <code>_config.yml</code> contains the following.</p>
+            <div class="language-yml highlighter-rouge">
+              <div class="highlight">
+                <pre class="highlight"><code><span class="na">jekyll_tidy</span><span class="pi">:</span>
+    <span class="na">exclude</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">assets/js/*"</span><span class="pi">]</span>
+    <span class="na">compress_html</span><span class="pi">:</span> <span class="no">false</span>
+</code></pre>
+              </div>
+            </div>
+            <p>There is negligle impact from doing this in regards to compile time.</p>
             <h2 id="post-optimisation">Post Optimisation</h2>
             <p>After optimising my site, my compile time went from <code>🐌 0.744s / 🐌🐌 0.664s</code> to a blazing fast <code>🔥 0.294s / 🔥🔥 0.267s</code>. That is a <strong>2.5x</strong> improvement in site compile times. As an added bonus, my output HTML doesn’t look like absolute trash.</p>
-            <p>I won’t be minifying my output for now, given the impact is negligible when hosted on GitHub Pages for now. I may turn it on in the future when it is warranted however.</p>
+            <p>That’s me done for the evening. Peace.</p>
           </div>
           <footer class="post-footer">
             <div class="share">Share
               <ul class="social-networks">
-                <li class="share-facebook"><a href="https://www.facebook.com/sharer.php?s=100&p[title]=Optimising a Jekyll Site&p[summary]=From the moment this site was first erected upon the mighty pedastal that is my GitHub Pages and hostname registered with Google Domains,...&p[url]=/jekyll/optimising-jekyll.html" class="s_facebook" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#facebook-icon"></use></svg></a></li>
-                <li class="share-twitter"><a href="http://twitter.com/share?url=/jekyll/optimising-jekyll.html&text=From the moment this site was first erected upon the mighty pedastal that is my GitHub Pages and hostname registered with Google Domains,...&hashtags=jekyll," rel="noreferrer" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#twitter-icon"></use></svg></a></li>
+                <li class="share-facebook"><a href="https://www.facebook.com/sharer.php?s=100&p[title]=Optimising a Jekyll Site&p[summary]=From the moment this site was first erected upon the mighty pedastal that is GitHub Pages, I got myself a jekyll template and got to work...&p[url]=/jekyll/optimising-jekyll.html" class="s_facebook" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#facebook-icon"></use></svg></a></li>
+                <li class="share-twitter"><a href="http://twitter.com/share?url=/jekyll/optimising-jekyll.html&text=From the moment this site was first erected upon the mighty pedastal that is GitHub Pages, I got myself a jekyll template and got to work...&hashtags=jekyll," rel="noreferrer" target="_blank" onclick="window.open(this.href, '','width=700,height=300');return false;"><svg title="" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/svg/social-icons.svg#twitter-icon"></use></svg></a></li>
               </ul>
             </div>
             <div class="tags">
