@@ -11,6 +11,7 @@ html, html[data-theme="dark"] {
 	--primary-color: #b60000;
 
 	--main-text-color: #ddd;
+	--main-text-lgr-color: #555;
 	--main-text-gr-color: #666;
 	--main-text-it-color: #ccc;
 	--main-text-em-color: #eee;
@@ -35,6 +36,7 @@ html[data-theme="light"] {
 	--primary-color: #007be0;
 
 	--main-text-color: #222;
+	--main-text-lgr-color: #ddd;
 	--main-text-gr-color: #888;
 	--main-text-it-color: #333;
 	--main-text-em-color: #111;
@@ -201,21 +203,21 @@ input:focus + .slider {	box-shadow: 0 0 1px white; }
 			ul, ol { margin: 15px 0;
 				ul, ol { padding: 0 0 0 20px; }
 				li { margin: 5px 0;
-					& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
+					& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--main-text-lgr-color); }
 				}
 			}
 
 			dl { margin: 40px 0;
 				dt { margin: 10px 0 0; font-size: 18px; font-weight: 700; }
 				dd { margin: 5px 0;
-					& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
+					& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--main-text-lgr-color); }
 				}
 			}
 
 			ul { list-style-type: disc; list-style-position: inside; }
 
 			p { margin: 15px 0; line-height: 27px; 
-				& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--box-border-color); }
+				& > code { font-size: 12px; padding: 3px 6px; background: var(--box-bg-color); border: 1px solid var(--main-text-lgr-color); }
 			}
 
 			.alignleft { float: left; margin: 20px 30px 20px 0; }
