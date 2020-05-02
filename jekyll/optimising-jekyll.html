@@ -122,9 +122,9 @@ _layouts/error.html          |     1 |   0.06K | 0.000
             <p>Compile time <code>⌛ 0.516s / ⌛⌛ 0.277s</code>. While the initial compile time didn’t show any noticable change, the subsequent runs showed a small amount of improvement.</p>
             <p>Gains will naturally depend on the amount of liquid on your site. From my research, the larger the site the more this would help. Mine is quite small right now.</p>
             <h3 id="replace-codekramdowncode-with-codecommonmarkcode">3. Replace <code>kramdown</code> with <code>commonmark</code></h3>
-            <p>From my testing, kramdown is <em>adequate</em>, but not the fastest in the compile time drag race. Here is where commonmark leaves the competition in the dust.</p>
+            <p>From my testing, kramdown is <em>adequate</em>, but not the fastest in the compile time drag race. Here is where <a href="https://github.com/jekyll/jekyll-commonmark">commonmark</a> leaves the competition in the dust.</p>
             <p>Do note however that commonmark doesnt support block attributes like <code>{:target=&quot;_blank&quot;}</code>. HTML tags will need to be used instead if you really went wild with block attributes.</p>
-            <p>To further increase compile speeds, I went with the GitHub Pages version of commonmark. This will sanitize your markdown according to the GitHub Pages spec. Things like <code>iframe</code> tags will break, but I wasn’t planning on using those anyway.</p>
+            <p>I went with the GitHub Pages version of commonmark, <a href="https://github.com/github/jekyll-commonmark-ghpages">jekyll-commonmark-ghpages</a>. This will sanitize your markdown according to the GitHub Pages spec. Things like <code>iframe</code> tags will break, but I wasn’t planning on using those anyway.</p>
             <p>I dropped the following into my <code>Gemfile</code>.</p>
             <div class="language-rb highlighter-rouge">
               <div class="highlight">
@@ -161,7 +161,7 @@ _layouts/error.html          |     1 |   0.06K | 0.000
             </div>
             <p>Apparently indents went right out the window and we’ve scorched the Geneva convention. This is a crime against humanity.</p>
             <h3 id="install-codejekyll-tidycode">1. Install <code>jekyll-tidy</code></h3>
-            <p>Here’s how you fix the warcrime shown above. Install a handy little gem called jekyll-tidy into your <code>Gemfile</code>.</p>
+            <p>Here’s how you fix the warcrime shown above. Install a handy little gem called <a href="https://github.com/apsislabs/jekyll-tidy">jekyll-tidy</a> into your <code>Gemfile</code>.</p>
             <div class="language-rb highlighter-rouge">
               <div class="highlight">
                 <pre class="highlight"><code><span class="n">gem</span> <span class="s2">"jekyll-tidy"</span>
@@ -185,7 +185,7 @@ _layouts/error.html          |     1 |   0.06K | 0.000
               </div>
             </div>
             <p>Compile time <code>🔥 0.294s / 🔥🔥 0.267s</code>. First compile time also dropped as a side effect, though there is now a little bit more overhead on subsequent compiles.</p>
-            <h3 id="minify-everything">2. Minify Everything</h3>
+            <h3 id="optional-minification">2. Optional Minification</h3>
             <p>It was at this point I discovered jekyll-tidy has a compression setting. Given GitHub Pages has limited bandwidth, I though this could be potentially useful. Add the following to your <code>_config.yml</code> to enable this setting.</p>
             <div class="language-yml highlighter-rouge">
               <div class="highlight">

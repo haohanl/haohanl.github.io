@@ -5,8 +5,8 @@
       <description>Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.</description>
       <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Sat, 02 May 2020 10:17:51 +0000</pubDate>
-      <lastBuildDate>Sat, 02 May 2020 10:17:51 +0000</lastBuildDate>
+      <pubDate>Sat, 02 May 2020 13:44:37 +0000</pubDate>
+      <lastBuildDate>Sat, 02 May 2020 13:44:37 +0000</lastBuildDate>
       <generator>Jekyll v4.0.0</generator>
       <item>
         <title>Optimising a Jekyll Site</title>
@@ -42,9 +42,9 @@
           &lt;p&gt;Compile time &lt;code&gt;⌛ 0.516s / ⌛⌛ 0.277s&lt;/code&gt;. While the initial compile time didn’t show any noticable change, the subsequent runs showed a small amount of improvement.&lt;/p&gt;
           &lt;p&gt;Gains will naturally depend on the amount of liquid on your site. From my research, the larger the site the more this would help. Mine is quite small right now.&lt;/p&gt;
           &lt;h3 id=&quot;replace-codekramdowncode-with-codecommonmarkcode&quot;&gt;3. Replace &lt;code&gt;kramdown&lt;/code&gt; with &lt;code&gt;commonmark&lt;/code&gt;&lt;/h3&gt;
-          &lt;p&gt;From my testing, kramdown is &lt;em&gt;adequate&lt;/em&gt;, but not the fastest in the compile time drag race. Here is where commonmark leaves the competition in the dust.&lt;/p&gt;
+          &lt;p&gt;From my testing, kramdown is &lt;em&gt;adequate&lt;/em&gt;, but not the fastest in the compile time drag race. Here is where &lt;a href=&quot;https://github.com/jekyll/jekyll-commonmark&quot;&gt;commonmark&lt;/a&gt; leaves the competition in the dust.&lt;/p&gt;
           &lt;p&gt;Do note however that commonmark doesnt support block attributes like &lt;code&gt;{:target=&amp;quot;_blank&amp;quot;}&lt;/code&gt;. HTML tags will need to be used instead if you really went wild with block attributes.&lt;/p&gt;
-          &lt;p&gt;To further increase compile speeds, I went with the GitHub Pages version of commonmark. This will sanitize your markdown according to the GitHub Pages spec. Things like &lt;code&gt;iframe&lt;/code&gt; tags will break, but I wasn’t planning on using those anyway.&lt;/p&gt;
+          &lt;p&gt;I went with the GitHub Pages version of commonmark, &lt;a href=&quot;https://github.com/github/jekyll-commonmark-ghpages&quot;&gt;jekyll-commonmark-ghpages&lt;/a&gt;. This will sanitize your markdown according to the GitHub Pages spec. Things like &lt;code&gt;iframe&lt;/code&gt; tags will break, but I wasn’t planning on using those anyway.&lt;/p&gt;
           &lt;p&gt;I dropped the following into my &lt;code&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
           &lt;div class=&quot;language-rb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-commonmark-ghpages&quot;&lt;/span&gt;
           &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -69,7 +69,7 @@
           &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;p&gt;Apparently indents went right out the window and we’ve scorched the Geneva convention. This is a crime against humanity.&lt;/p&gt;
           &lt;h3 id=&quot;install-codejekyll-tidycode&quot;&gt;1. Install &lt;code&gt;jekyll-tidy&lt;/code&gt;&lt;/h3&gt;
-          &lt;p&gt;Here’s how you fix the warcrime shown above. Install a handy little gem called jekyll-tidy into your &lt;code&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
+          &lt;p&gt;Here’s how you fix the warcrime shown above. Install a handy little gem called &lt;a href=&quot;https://github.com/apsislabs/jekyll-tidy&quot;&gt;jekyll-tidy&lt;/a&gt; into your &lt;code&gt;Gemfile&lt;/code&gt;.&lt;/p&gt;
           &lt;div class=&quot;language-rb highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-tidy&quot;&lt;/span&gt;
           &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;p&gt;Immediately after recompiling, every is right in the world once more. It’s truly beautiful.&lt;/p&gt;
@@ -85,7 +85,7 @@
           &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
           &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;p&gt;Compile time &lt;code&gt;🔥 0.294s / 🔥🔥 0.267s&lt;/code&gt;. First compile time also dropped as a side effect, though there is now a little bit more overhead on subsequent compiles.&lt;/p&gt;
-          &lt;h3 id=&quot;minify-everything&quot;&gt;2. Minify Everything&lt;/h3&gt;
+          &lt;h3 id=&quot;optional-minification&quot;&gt;2. Optional Minification&lt;/h3&gt;
           &lt;p&gt;It was at this point I discovered jekyll-tidy has a compression setting. Given GitHub Pages has limited bandwidth, I though this could be potentially useful. Add the following to your &lt;code&gt;_config.yml&lt;/code&gt; to enable this setting.&lt;/p&gt;
           &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;jekyll_tidy&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
           &lt;span class=&quot;na&quot;&gt;compress_html&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
