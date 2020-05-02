@@ -30,7 +30,7 @@ social_networks:
 -  { name: 500px, url: '' }
 -  { name: flickr, url: '' }
 -  { name: spotify, url: '' }
--  { name: steam, url: '' }
+-  { name: steam, url: 'https://steamcommunity.com/id/pandasaurus_r' }
 -  { name: wordpress, url: '' }
 -  { name: xing, url: '' }
 -  { name: bitcoin, url: '' }
