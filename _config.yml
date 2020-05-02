@@ -80,6 +80,7 @@ commonmark:
 excerpt_separator: <!--more-->
 
 jekyll_tidy:
+  exclude: ["assets/js/*"]
   compress_html: false
 
 # Assets Settings

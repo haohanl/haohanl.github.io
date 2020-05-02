@@ -8,9 +8,9 @@ tag:
 - jekyll
 ---
 
-From the moment this site was first erected upon the mighty pedastal that is my GitHub Pages and hostname registered with Google Domains, I got myself a jekyll template and got to work making a neat little personal portfolio. 
+From the moment this site was first erected upon the mighty pedastal that is GitHub Pages, I got myself a jekyll template and got to work making a neat little personal portfolio. 
 
-Here's what I learnt after spending a day optimising the shoddy state of the template I got.
+Here's what I learnt after a spending day optimising the shoddy state of the template.
 
 <!--more-->
 
@@ -140,10 +140,21 @@ After recompiling, my pages became one huge block of raw unfiltered hatred in HT
 <main class="the-content" role="main"> <div class="search" role="search"> <div> <div class="show-results-count">0 Results</div> <div class="search-holder"> <input type="text" id="search-input"/> </div> </div> <ul id="results-container" class="results-container"></ul> </div>
 ```
 
-Compile time `⌛ 0.386s / ⌛⌛ 0.367s`. Minifying a whole site definitely adds to the compile time, but it does _slightly_ improve site responsiveness in a _not at all scientific_ side to side comparison.
+Compile time `⌛ 0.386s / ⌛⌛ 0.367s`. Minifying a whole site definitely adds to the compile time, but it does _slightly_ improve site responsiveness in a _not at all scientific_ side to side comparison. I won't be using this feature in deployment however. 
 
+
+### 3. Exclude `jekyll-tidy` from Javascript
+
+I did discover that jekyll-tidy broke some of my javascript. To fix that issue, my `_config.yml` contains the following.
+```yml
+jekyll_tidy:
+    exclude: ["assets/js/*"]
+    compress_html: false
+```
+
+There is negligle impact from doing this in regards to compile time.
 
 ## Post Optimisation
 After optimising my site, my compile time went from `🐌 0.744s / 🐌🐌 0.664s` to a blazing fast `🔥 0.294s / 🔥🔥 0.267s`. That is a **2.5x** improvement in site compile times. As an added bonus, my output HTML doesn't look like absolute trash. 
 
-I won't be minifying my output for now, given the impact is negligible when hosted on GitHub Pages for now. I may turn it on in the future when it is warranted however. 
+That's me done for the evening. Peace.
