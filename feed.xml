@@ -5,8 +5,8 @@
       <description>Welcome to my little corner of the internet. Enjoy my inane ramblings and occasional lucid thoughts.</description>
       <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Sat, 02 May 2020 13:44:37 +0000</pubDate>
-      <lastBuildDate>Sat, 02 May 2020 13:44:37 +0000</lastBuildDate>
+      <pubDate>Sun, 03 May 2020 05:59:01 +0000</pubDate>
+      <lastBuildDate>Sun, 03 May 2020 05:59:01 +0000</lastBuildDate>
       <generator>Jekyll v4.0.0</generator>
       <item>
         <title>Optimising a Jekyll Site</title>
@@ -86,7 +86,7 @@
           &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;p&gt;Compile time &lt;code&gt;🔥 0.294s / 🔥🔥 0.267s&lt;/code&gt;. First compile time also dropped as a side effect, though there is now a little bit more overhead on subsequent compiles.&lt;/p&gt;
           &lt;h3 id=&quot;optional-minification&quot;&gt;2. Optional Minification&lt;/h3&gt;
-          &lt;p&gt;It was at this point I discovered jekyll-tidy has a compression setting. Given GitHub Pages has limited bandwidth, I though this could be potentially useful. Add the following to your &lt;code&gt;_config.yml&lt;/code&gt; to enable this setting.&lt;/p&gt;
+          &lt;p&gt;It was at this point I discovered jekyll-tidy has a compression setting. Given GitHub Pages has limited bandwidth, I thought this could be potentially useful. Add the following to your &lt;code&gt;_config.yml&lt;/code&gt; to enable this setting.&lt;/p&gt;
           &lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;jekyll_tidy&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
           &lt;span class=&quot;na&quot;&gt;compress_html&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
           &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
