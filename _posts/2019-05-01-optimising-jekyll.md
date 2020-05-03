@@ -127,7 +127,7 @@ Compile time `🔥 0.294s / 🔥🔥 0.267s`. First compile time also dropped as
 
 
 ### 2. Optional Minification
-It was at this point I discovered jekyll-tidy has a compression setting. Given GitHub Pages has limited bandwidth, I though this could be potentially useful. Add the following to your `_config.yml` to enable this setting.
+It was at this point I discovered jekyll-tidy has a compression setting. Given GitHub Pages has limited bandwidth, I thought this could be potentially useful. Add the following to your `_config.yml` to enable this setting.
 
 ```yml
 jekyll_tidy:
