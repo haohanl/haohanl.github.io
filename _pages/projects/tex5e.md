@@ -16,17 +16,17 @@ permalink: "/projects/tex5e"
     <tr>
         <td>
             <a href="/media/tex5e/t5e_sample1.jpg">
-                <img src="/media/tex5e/t5e_sample1.jpg" />
+                <img src="/media/tex5e/t5e_sample1_small.jpg" />
             </a>
         </td>
         <td>
             <a href="/media/tex5e/t5e_sample2.jpg">
-                <img src="/media/tex5e/t5e_sample2.jpg" />
+                <img src="/media/tex5e/t5e_sample2_small.jpg" />
             </a>
         </td>
         <td>
             <a href="/media/tex5e/t5e_sample3.jpg">
-                <img src="/media/tex5e/t5e_sample3.jpg" />
+                <img src="/media/tex5e/t5e_sample3_small.jpg" />
             </a>
         </td>
     </tr>
