@@ -32,14 +32,14 @@ var store = [{
     "title": "Optimising a Jekyll Site",
     "link": "/jekyll/optimising-jekyll.html",
     "image": null,
-    "date": "May 1, 2019",
+    "date": "May 1, 2020",
     "category": ["jekyll"],
     "excerpt": "From the moment this site was first erected upon the mighty pedastal that is GitHub Pages, I got myself a..."
 },{
     "title": "Introductions",
     "link": "/fluff/introductions.html",
     "image": null,
-    "date": "April 19, 2019",
+    "date": "April 19, 2020",
     "category": ["fluff"],
     "excerpt": "Oh wow would you look at that. There’s a website here now. Feel free to check back every-so-often and there’s..."
 }]
