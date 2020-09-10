@@ -21,7 +21,7 @@ var index = lunr(function () {
     index.add({
       title: "Introductions",
       category: ["fluff"],
-      content: "Oh wow would you look at that. There’s a website here now.\nFeel free to check back every-so-often and there’s a non-zero chance that there may be something new to see.\nIn the meantime, feel free to click around and see if anything breaks.\n",
+      content: "Oh wow would you look at that. There’s a website here now. Nice!\nFeel free to check back every-so-often and there’s a non-zero chance that there may be something new to see.\nIn the meantime, feel free to click around and see if anything breaks.\n",
       tags: ["fluff"],
       id: 1
     });
@@ -41,7 +41,7 @@ var store = [{
     "image": null,
     "date": "April 19, 2020",
     "category": ["fluff"],
-    "excerpt": "Oh wow would you look at that. There’s a website here now. Feel free to check back every-so-often and there’s..."
+    "excerpt": "Oh wow would you look at that. There’s a website here now. Nice! Feel free to check back every-so-often and..."
 }]
 
 $(document).ready(function() {
