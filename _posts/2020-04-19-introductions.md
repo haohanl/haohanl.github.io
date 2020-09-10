@@ -8,7 +8,7 @@ tag:
 - fluff
 ---
 
-Oh wow would you look at that. There's a website here now.
+Oh wow would you look at that. There's a website here now. Nice!
 
 Feel free to check back every-so-often and there's a non-zero chance that there may be something new to see.
 
