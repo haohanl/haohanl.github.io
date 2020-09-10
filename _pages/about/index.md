@@ -59,6 +59,6 @@ Need to reach me?
 
 Email: [haohan@outlook.com.au](mailto:haohan@outlook.com.au)
 
-GitHub: [https://github.com/PandasaurusR](https://github.com/PandasaurusR)
+GitHub: [https://github.com/haohanl](https://github.com/haohanl)
 
 Discord: Panda#1799

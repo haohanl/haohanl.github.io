@@ -1,4 +1,4 @@
-# PandasaurusR.github.io
+# haohanl.github.io
 
 Well hello there. You've reached the repository for my personal website. 
 
