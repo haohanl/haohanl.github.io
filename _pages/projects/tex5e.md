@@ -4,9 +4,9 @@ title:  "TeX5e"
 permalink: "/projects/tex5e"
 ---
 
-**TeX5e** is a _LaTeX_ template designed for the creation of homebrew materials in a manner which reflects the style of the _Dungeons & Dragons 5th Edition: Player's Handbook_.
+**TeX5e** is a _LaTeX_ and _Python_ program designed for the creation of homebrew materials in a manner which reflects the style of the _Dungeons & Dragons 5th Edition: Player's Handbook_.
 
-
+To avoid any legal issues, the source code for this project is not available online. 
 
 
 ## Showcase

@@ -4,10 +4,9 @@ title:  "ScriptEx(Dee|Dee II)?"
 permalink: "/projects/scriptex"
 ---
 
-**ScriptEx**, with later revisions **ScriptExDee** and **ScriptExDee II**, is a passion project developed in my spare time with the goal of streamlining software installation, system testing, and quality control at <abbr title="PC Case Gear">PCCG</abbr>. ScriptEx and its future revisions were branched from an existing GUI-based _Builder Companion_ program, written by Magnus Hjorth. 
+**ScriptEx**, with later revisions **ScriptExDee** and **ScriptExDee II**, is a passion project developed in my spare time with the goal of streamlining software installation, system testing, and quality control at <abbr title="PC Case Gear">PCCG</abbr>. ScriptEx and its future revisions superceded the existing GUI-based _Builder Companion_ program, written by Magnus Hjorth. 
 
 The intent was to create a lightweight, portable, and flexible platform with core functionality that could be modified on-site (without recompilation).
-
 
 
 ## Main Features
@@ -32,6 +31,8 @@ ScriptEx is written in C# on .NET 4.7.2. This platform was chosen due to its clo
 
 
 ## Repository
+
+This repository contains all previous revisions of the ScriptEx project. Current version in active use are not online.
 
 [https://github.com/haohanl/ScriptEx](https://github.com/haohanl/ScriptEx)
 
