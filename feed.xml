@@ -5,8 +5,8 @@
       <description>Welcome to my little corner of the internet.</description>
       <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-      <pubDate>Sat, 03 Oct 2020 11:48:55 +0000</pubDate>
-      <lastBuildDate>Sat, 03 Oct 2020 11:48:55 +0000</lastBuildDate>
+      <pubDate>Thu, 17 Jun 2021 17:57:58 +1000</pubDate>
+      <lastBuildDate>Thu, 17 Jun 2021 17:57:58 +1000</lastBuildDate>
       <generator>Jekyll v4.0.1</generator>
       <item>
         <title>Optimising a Jekyll Site</title>
@@ -105,7 +105,7 @@
           &lt;p&gt;After optimising my site, my compile time went from &lt;code&gt;🐌 0.744s / 🐌🐌 0.664s&lt;/code&gt; to a blazing fast &lt;code&gt;🔥 0.294s / 🔥🔥 0.267s&lt;/code&gt;. That is a &lt;strong&gt;2.5x&lt;/strong&gt; improvement in site compile times. As an added bonus, my output HTML doesn’t look like absolute trash.&lt;/p&gt;
           &lt;p&gt;That’s me done for the evening. Peace.&lt;/p&gt;
         </description>
-        <pubDate>Fri, 01 May 2020 19:45:00 +0000</pubDate>
+        <pubDate>Fri, 01 May 2020 19:45:00 +1000</pubDate>
         <link>/jekyll/optimising-jekyll.html</link>
       <guid isPermaLink="true">/jekyll/optimising-jekyll.html</guid>
       <category>jekyll</category>
@@ -117,7 +117,7 @@
         &lt;p&gt;Feel free to check back every-so-often and there’s a non-zero chance that there may be something new to see.&lt;/p&gt;
         &lt;p&gt;In the meantime, feel free to click around and see if anything breaks.&lt;/p&gt;
       </description>
-      <pubDate>Sun, 19 Apr 2020 18:17:00 +0000</pubDate>
+      <pubDate>Sun, 19 Apr 2020 18:17:00 +1000</pubDate>
       <link>/fluff/introductions.html</link>
     <guid isPermaLink="true">/fluff/introductions.html</guid>
     <category>fluff</category>
